@@ -17,9 +17,8 @@ class TemplateRepository @Inject constructor(
 ) {
     private val json = Json { ignoreUnknownKeys = true }
 
-    // TODO: Reemplazar TU_USUARIO con tu usuario de GitHub tras subir el proyecto
     private val remoteUrl =
-        "https://cdn.jsdelivr.net/gh/TU_USUARIO/MemeForge@main/templates/templates.json"
+        "https://cdn.jsdelivr.net/gh/hernancasla/meme-forge@main/templates/templates.json"
 
     private val cacheFile: File
         get() = File(context.filesDir, "templates_cache.json")
