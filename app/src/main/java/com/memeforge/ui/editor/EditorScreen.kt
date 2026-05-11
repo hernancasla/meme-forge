@@ -25,7 +25,9 @@ import coil.request.ImageRequest
 import coil.request.SuccessResult
 import com.memeforge.R
 import com.memeforge.ui.components.MemeCanvas
+import com.memeforge.util.StickerExporter
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -37,6 +39,7 @@ fun EditorScreen(
 ) {
     val uiState by viewModel.uiState.collectAsState()
     val context = LocalContext.current
+    val scope = rememberCoroutineScope()
 
     var sourceBitmap by remember { mutableStateOf<Bitmap?>(null) }
 
@@ -177,6 +180,39 @@ fun EditorScreen(
                 enabled = uiState.previewBitmap != null || uiState.savedUri != null
             ) {
                 Text(stringResource(R.string.btn_share))
+            }
+
+            Spacer(Modifier.height(8.dp))
+
+            OutlinedButton(
+                onClick = {
+                    val bmp = uiState.previewBitmap ?: sourceBitmap ?: return@OutlinedButton
+                    scope.launch(Dispatchers.IO) {
+                        val file = File(context.cacheDir, "sticker.webp")
+                        StickerExporter.exportAsWebP(bmp, file)
+                        val uri = FileProvider.getUriForFile(
+                            context,
+                            "${context.packageName}.fileprovider",
+                            file
+                        )
+                        withContext(Dispatchers.Main) {
+                            val intent = Intent(Intent.ACTION_SEND).apply {
+                                type = "image/webp"
+                                putExtra(Intent.EXTRA_STREAM, uri)
+                                addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
+                            }
+                            context.startActivity(
+                                Intent.createChooser(intent, context.getString(R.string.share_sticker))
+                            )
+                        }
+                    }
+                },
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(horizontal = 16.dp),
+                enabled = uiState.previewBitmap != null || sourceBitmap != null
+            ) {
+                Text(stringResource(R.string.btn_create_sticker))
             }
 
             Spacer(Modifier.height(16.dp))
