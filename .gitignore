@@ -45,4 +45,7 @@ keystore.properties
 
 # Logs
 *.log
+
+# Java heap dumps
+*.hprof
 /app/
