@@ -12,6 +12,7 @@
     <string name="share_meme">Compartir meme</string>
     <string name="template_editor">Editor de memes</string>
     <string name="saving">Guardando…</string>
+    <string name="saved_successfully">¡Meme guardado en la galería!</string>
     <string name="error_saving">Error al guardar</string>
     <string name="error_loading">Error al cargar la plantilla</string>
 </resources>
