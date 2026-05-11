@@ -1,11 +1,47 @@
-*.iml
-.gradle
-/local.properties
-/.idea
-.DS_Store
+# Build outputs
 /build
 **/build/
+*.apk
+*.aab
+*.aar
+*.ap_
+*.dex
+
+# Gradle
+.gradle
+gradle-app.setting
+!gradle/wrapper/gradle-wrapper.jar
+.gradletasknamecache
+
+# Android Studio / IntelliJ
+*.iml
+/.idea
+.DS_Store
 /captures
 .externalNativeBuild
 .cxx
+
+# Local config (nunca commitear)
 local.properties
+keystore.properties
+
+# Keystore / signing
+*.jks
+*.keystore
+
+# Proguard mapping (generado en release)
+**/mapping.txt
+**/seeds.txt
+**/usage.txt
+
+# Native
+*.so
+*.o
+*.obj
+
+# Kotlin
+*.class
+*.kotlin_module
+
+# Logs
+*.log
