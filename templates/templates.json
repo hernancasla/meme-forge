@@ -1,0 +1,99 @@
+[
+  {
+    "id": "drake",
+    "name": "Drake Pointing",
+    "imageUrl": "https://i.imgflip.com/30b1gx.jpg",
+    "category": "classic",
+    "textZones": [
+      { "id": "top", "label": "Rechaza", "defaultX": 0.75, "defaultY": 0.25, "defaultText": "Escribí algo aquí" },
+      { "id": "bottom", "label": "Prefiere", "defaultX": 0.75, "defaultY": 0.75, "defaultText": "Escribí algo aquí" }
+    ]
+  },
+  {
+    "id": "distracted",
+    "name": "Distracted Boyfriend",
+    "imageUrl": "https://i.imgflip.com/1ur9b0.jpg",
+    "category": "classic",
+    "textZones": [
+      { "id": "left", "label": "Novia", "defaultX": 0.15, "defaultY": 0.15, "defaultText": "" },
+      { "id": "center", "label": "Él", "defaultX": 0.5, "defaultY": 0.85, "defaultText": "" },
+      { "id": "right", "label": "Otra", "defaultX": 0.82, "defaultY": 0.25, "defaultText": "" }
+    ]
+  },
+  {
+    "id": "twobuttons",
+    "name": "Two Buttons",
+    "imageUrl": "https://i.imgflip.com/1g8my4.jpg",
+    "category": "reaction",
+    "textZones": [
+      { "id": "btn1", "label": "Botón 1", "defaultX": 0.22, "defaultY": 0.25, "defaultText": "" },
+      { "id": "btn2", "label": "Botón 2", "defaultX": 0.72, "defaultY": 0.25, "defaultText": "" }
+    ]
+  },
+  {
+    "id": "thisisfine",
+    "name": "This is Fine",
+    "imageUrl": "https://i.imgflip.com/wxica.jpg",
+    "category": "reaction",
+    "textZones": [
+      { "id": "top", "label": "Texto", "defaultX": 0.5, "defaultY": 0.1, "defaultText": "Todo está bien" }
+    ]
+  },
+  {
+    "id": "changemymind",
+    "name": "Change My Mind",
+    "imageUrl": "https://i.imgflip.com/24y43o.jpg",
+    "category": "trending",
+    "textZones": [
+      { "id": "sign", "label": "Letrero", "defaultX": 0.5, "defaultY": 0.65, "defaultText": "Escribí tu opinión" }
+    ]
+  },
+  {
+    "id": "exitramp",
+    "name": "Left Exit Ramp",
+    "imageUrl": "https://i.imgflip.com/22bdq6.jpg",
+    "category": "trending",
+    "textZones": [
+      { "id": "straight", "label": "Sigue de frente", "defaultX": 0.75, "defaultY": 0.3, "defaultText": "" },
+      { "id": "exit", "label": "Toma la salida", "defaultX": 0.25, "defaultY": 0.7, "defaultText": "" }
+    ]
+  },
+  {
+    "id": "homer_bushes",
+    "name": "Homer en los arbustos",
+    "imageUrl": "https://i.imgflip.com/s3vqq7.jpg",
+    "category": "simpsons",
+    "textZones": [
+      { "id": "top", "label": "Situación", "defaultX": 0.5, "defaultY": 0.1, "defaultText": "" }
+    ]
+  },
+  {
+    "id": "bart_chalkboard",
+    "name": "Bart en la pizarra",
+    "imageUrl": "https://i.imgflip.com/32sg0k.jpg",
+    "category": "simpsons",
+    "textZones": [
+      { "id": "line", "label": "Línea en la pizarra", "defaultX": 0.5, "defaultY": 0.5, "defaultText": "No voy a..." }
+    ]
+  },
+  {
+    "id": "comic_book_guy",
+    "name": "Comic Book Guy",
+    "imageUrl": "https://i.imgflip.com/4t0m5.jpg",
+    "category": "simpsons",
+    "textZones": [
+      { "id": "top", "label": "Peor...", "defaultX": 0.5, "defaultY": 0.15, "defaultText": "Peor" },
+      { "id": "bottom", "label": "...del mundo", "defaultX": 0.5, "defaultY": 0.85, "defaultText": "del mundo" }
+    ]
+  },
+  {
+    "id": "steamed_hams",
+    "name": "Steamed Hams",
+    "imageUrl": "https://i.imgflip.com/3lmzyx.jpg",
+    "category": "simpsons",
+    "textZones": [
+      { "id": "skinner", "label": "Skinner", "defaultX": 0.25, "defaultY": 0.85, "defaultText": "" },
+      { "id": "chalmers", "label": "Chalmers", "defaultX": 0.75, "defaultY": 0.85, "defaultText": "" }
+    ]
+  }
+]
