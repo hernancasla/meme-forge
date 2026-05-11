@@ -1,6 +1,5 @@
 package com.memeforge.ui.editor
 
-import android.app.Activity
 import android.content.Intent
 import android.graphics.Bitmap
 import android.graphics.drawable.BitmapDrawable
@@ -35,7 +34,6 @@ fun EditorScreen(
 ) {
     val uiState by viewModel.uiState.collectAsState()
     val context = LocalContext.current
-    val activity = context as Activity
 
     var sourceBitmap by remember { mutableStateOf<Bitmap?>(null) }
 
@@ -54,30 +52,6 @@ fun EditorScreen(
             if (result is SuccessResult) {
                 sourceBitmap = (result.drawable as? BitmapDrawable)?.bitmap
             }
-        }
-    }
-
-    // Disparar share intent cuando se guarda el meme
-    LaunchedEffect(uiState.shareUri) {
-        uiState.shareUri?.let { uri ->
-            val intent = Intent(Intent.ACTION_SEND).apply {
-                type = "image/jpeg"
-                putExtra(Intent.EXTRA_STREAM, uri)
-                addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
-            }
-            context.startActivity(Intent.createChooser(intent, context.getString(R.string.share_meme)))
-            viewModel.clearShareUri()
-        }
-    }
-
-    // Mostrar interstitial cuando el ViewModel lo solicita
-    LaunchedEffect(uiState.showInterstitial) {
-        if (uiState.showInterstitial) {
-            sourceBitmap?.let { bmp ->
-                viewModel.adManager.showInterstitial(activity) {
-                    viewModel.onInterstitialHandled(bmp)
-                }
-            } ?: viewModel.onInterstitialHandled(sourceBitmap ?: return@LaunchedEffect)
         }
     }
 
@@ -158,42 +132,36 @@ fun EditorScreen(
                 }
 
                 Button(
-                    onClick = { sourceBitmap?.let { viewModel.requestSave(it) } },
+                    onClick = { sourceBitmap?.let { viewModel.save(it) } },
                     modifier = Modifier.weight(1f),
                     enabled = sourceBitmap != null && !uiState.isSaving
                 ) {
                     if (uiState.isSaving) {
-                        CircularProgressIndicator(
-                            modifier = Modifier.size(16.dp),
-                            strokeWidth = 2.dp
-                        )
+                        CircularProgressIndicator(modifier = Modifier.size(16.dp), strokeWidth = 2.dp)
                     } else {
-                        Text(stringResource(R.string.btn_save_share))
+                        Text(stringResource(R.string.btn_save))
                     }
                 }
             }
 
             Spacer(Modifier.height(8.dp))
 
-            OutlinedButton(
+            Button(
                 onClick = {
-                    viewModel.adManager.showRewarded(
-                        activity = activity,
-                        onRewarded = { viewModel.unlockPremium() },
-                        onDismissed = {}
-                    )
+                    val uri = uiState.savedUri ?: return@Button
+                    val intent = Intent(Intent.ACTION_SEND).apply {
+                        type = "image/jpeg"
+                        putExtra(Intent.EXTRA_STREAM, uri)
+                        addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
+                    }
+                    context.startActivity(Intent.createChooser(intent, context.getString(R.string.share_meme)))
                 },
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(horizontal = 16.dp),
-                enabled = !uiState.premiumUnlocked
+                enabled = uiState.savedUri != null
             ) {
-                Text(
-                    if (uiState.premiumUnlocked)
-                        stringResource(R.string.premium_unlocked)
-                    else
-                        stringResource(R.string.btn_premium)
-                )
+                Text(stringResource(R.string.btn_share))
             }
 
             Spacer(Modifier.height(16.dp))
