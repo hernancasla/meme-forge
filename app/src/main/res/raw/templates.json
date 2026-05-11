@@ -57,5 +57,43 @@
       { "id": "straight", "label": "Sigue de frente", "defaultX": 0.75, "defaultY": 0.3, "defaultText": "" },
       { "id": "exit", "label": "Toma la salida", "defaultX": 0.25, "defaultY": 0.7, "defaultText": "" }
     ]
+  },
+  {
+    "id": "homer_bushes",
+    "name": "Homer en los arbustos",
+    "imageUrl": "https://i.imgflip.com/s3vqq7.jpg",
+    "category": "simpsons",
+    "textZones": [
+      { "id": "top", "label": "Situación", "defaultX": 0.5, "defaultY": 0.1, "defaultText": "" }
+    ]
+  },
+  {
+    "id": "bart_chalkboard",
+    "name": "Bart en la pizarra",
+    "imageUrl": "https://i.imgflip.com/32sg0k.jpg",
+    "category": "simpsons",
+    "textZones": [
+      { "id": "line", "label": "Línea en la pizarra", "defaultX": 0.5, "defaultY": 0.5, "defaultText": "No voy a..." }
+    ]
+  },
+  {
+    "id": "comic_book_guy",
+    "name": "Comic Book Guy",
+    "imageUrl": "https://i.imgflip.com/4t0m5.jpg",
+    "category": "simpsons",
+    "textZones": [
+      { "id": "top", "label": "Peor...", "defaultX": 0.5, "defaultY": 0.15, "defaultText": "Peor" },
+      { "id": "bottom", "label": "...del mundo", "defaultX": 0.5, "defaultY": 0.85, "defaultText": "del mundo" }
+    ]
+  },
+  {
+    "id": "steamed_hams",
+    "name": "Steamed Hams",
+    "imageUrl": "https://i.imgflip.com/3lmzyx.jpg",
+    "category": "simpsons",
+    "textZones": [
+      { "id": "skinner", "label": "Skinner", "defaultX": 0.25, "defaultY": 0.85, "defaultText": "" },
+      { "id": "chalmers", "label": "Chalmers", "defaultX": 0.75, "defaultY": 0.85, "defaultText": "" }
+    ]
   }
 ]

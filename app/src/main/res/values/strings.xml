@@ -3,6 +3,7 @@
     <string name="app_name">MemeForge</string>
     <string name="search_hint">Buscar plantillas…</string>
     <string name="category_all">Todas</string>
+    <string name="category_simpsons">Simpsons</string>
     <string name="category_classic">Clásicos</string>
     <string name="category_trending">Tendencia</string>
     <string name="category_reaction">Reacción</string>

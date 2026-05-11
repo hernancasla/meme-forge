@@ -23,7 +23,7 @@ fun HomeScreen(
     viewModel: HomeViewModel = hiltViewModel()
 ) {
     val uiState by viewModel.uiState.collectAsState()
-    val categories = listOf("all", "classic", "trending", "reaction")
+    val categories = listOf("all", "simpsons", "classic", "trending", "reaction")
 
     Scaffold(
         topBar = {
@@ -32,6 +32,11 @@ fun HomeScreen(
         bottomBar = { AdBanner() }
     ) { padding ->
         Column(modifier = Modifier.padding(padding)) {
+
+            if (uiState.isRefreshing) {
+                LinearProgressIndicator(modifier = Modifier.fillMaxWidth())
+            }
+
             OutlinedTextField(
                 value = uiState.searchQuery,
                 onValueChange = viewModel::onSearchQueryChanged,
@@ -53,6 +58,7 @@ fun HomeScreen(
                             Text(
                                 when (category) {
                                     "all" -> stringResource(R.string.category_all)
+                                    "simpsons" -> stringResource(R.string.category_simpsons)
                                     "classic" -> stringResource(R.string.category_classic)
                                     "trending" -> stringResource(R.string.category_trending)
                                     "reaction" -> stringResource(R.string.category_reaction)

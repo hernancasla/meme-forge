@@ -1,19 +1,22 @@
 package com.memeforge.ui.home
 
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
 import com.memeforge.data.model.MemeTemplate
 import com.memeforge.data.repository.TemplateRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 data class HomeUiState(
     val templates: List<MemeTemplate> = emptyList(),
     val filteredTemplates: List<MemeTemplate> = emptyList(),
     val selectedCategory: String = "all",
-    val searchQuery: String = ""
+    val searchQuery: String = "",
+    val isRefreshing: Boolean = false
 )
 
 @HiltViewModel
@@ -25,8 +28,21 @@ class HomeViewModel @Inject constructor(
     val uiState: StateFlow<HomeUiState> = _uiState.asStateFlow()
 
     init {
-        val templates = repository.getTemplates()
-        _uiState.value = HomeUiState(templates = templates, filteredTemplates = templates)
+        val local = repository.getTemplates()
+        _uiState.value = HomeUiState(
+            templates = local,
+            filteredTemplates = local,
+            isRefreshing = true
+        )
+        viewModelScope.launch {
+            val remote = repository.refreshTemplates()
+            val current = _uiState.value
+            _uiState.value = current.copy(
+                templates = remote,
+                filteredTemplates = filter(remote, current.selectedCategory, current.searchQuery),
+                isRefreshing = false
+            )
+        }
     }
 
     fun onCategorySelected(category: String) {
