@@ -1,0 +1,22 @@
+[
+    {
+        "merged": "com.memeforge.app-debug-78:/drawable_ic_launcher_background.xml.flat",
+        "source": "com.memeforge.app-main-80:/drawable/ic_launcher_background.xml"
+    },
+    {
+        "merged": "com.memeforge.app-debug-78:/raw_templates.json.flat",
+        "source": "com.memeforge.app-main-80:/raw/templates.json"
+    },
+    {
+        "merged": "com.memeforge.app-debug-78:/drawable_ic_launcher_foreground.xml.flat",
+        "source": "com.memeforge.app-main-80:/drawable/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "com.memeforge.app-debug-78:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.memeforge.app-main-80:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "com.memeforge.app-debug-78:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "com.memeforge.app-main-80:/mipmap-anydpi-v26/ic_launcher_round.xml"
+    }
+]

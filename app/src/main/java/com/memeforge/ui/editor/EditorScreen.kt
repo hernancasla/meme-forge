@@ -4,6 +4,8 @@ import android.content.Intent
 import android.graphics.Bitmap
 import android.graphics.drawable.BitmapDrawable
 import android.widget.Toast
+import androidx.core.content.FileProvider
+import java.io.File
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
@@ -155,10 +157,16 @@ fun EditorScreen(
 
             Button(
                 onClick = {
-                    val uri = uiState.savedUri ?: return@Button
+                    val shareUri = uiState.savedUri ?: run {
+                        // Si no se guardó en galería, compartir desde bitmap en cache
+                        val bmp = uiState.previewBitmap ?: sourceBitmap ?: return@Button
+                        val file = File(context.cacheDir, "meme_share.jpg")
+                        file.outputStream().use { bmp.compress(Bitmap.CompressFormat.JPEG, 95, it) }
+                        FileProvider.getUriForFile(context, "${context.packageName}.fileprovider", file)
+                    }
                     val intent = Intent(Intent.ACTION_SEND).apply {
                         type = "image/jpeg"
-                        putExtra(Intent.EXTRA_STREAM, uri)
+                        putExtra(Intent.EXTRA_STREAM, shareUri)
                         addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
                     }
                     context.startActivity(Intent.createChooser(intent, context.getString(R.string.share_meme)))
@@ -166,7 +174,7 @@ fun EditorScreen(
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(horizontal = 16.dp),
-                enabled = uiState.savedUri != null
+                enabled = uiState.previewBitmap != null || uiState.savedUri != null
             ) {
                 Text(stringResource(R.string.btn_share))
             }

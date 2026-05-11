@@ -1,0 +1,28 @@
+R_DEF: Internal format may change without notice
+local
+color black
+color purple_200
+color purple_500
+color purple_700
+color teal_200
+color white
+drawable ic_launcher_background
+drawable ic_launcher_foreground
+mipmap ic_launcher
+mipmap ic_launcher_round
+raw templates
+string app_name
+string btn_preview
+string btn_save
+string btn_share
+string category_all
+string category_classic
+string category_reaction
+string category_trending
+string error_loading
+string error_saving
+string saving
+string search_hint
+string share_meme
+string template_editor
+style Theme.MemeForge
