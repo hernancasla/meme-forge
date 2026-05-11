@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MemeForge</string>
+    <string name="search_hint">Buscar plantillas…</string>
+    <string name="category_all">Todas</string>
+    <string name="category_classic">Clásicos</string>
+    <string name="category_trending">Tendencia</string>
+    <string name="category_reaction">Reacción</string>
+    <string name="btn_preview">Ver preview</string>
+    <string name="btn_save_share">Guardar y compartir</string>
+    <string name="btn_premium">Fondos premium</string>
+    <string name="share_meme">Compartir meme</string>
+    <string name="template_editor">Editor de memes</string>
+    <string name="premium_unlocked">¡Fondos desbloqueados!</string>
+    <string name="saving">Guardando…</string>
+    <string name="error_saving">Error al guardar</string>
+    <string name="error_loading">Error al cargar la plantilla</string>
+</resources>

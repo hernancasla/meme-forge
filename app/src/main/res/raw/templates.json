@@ -1,0 +1,61 @@
+[
+  {
+    "id": "drake",
+    "name": "Drake Pointing",
+    "imageUrl": "https://i.imgflip.com/30b1gx.jpg",
+    "category": "classic",
+    "textZones": [
+      { "id": "top", "label": "Rechaza", "defaultX": 0.75, "defaultY": 0.25, "defaultText": "Escribí algo aquí" },
+      { "id": "bottom", "label": "Prefiere", "defaultX": 0.75, "defaultY": 0.75, "defaultText": "Escribí algo aquí" }
+    ]
+  },
+  {
+    "id": "distracted",
+    "name": "Distracted Boyfriend",
+    "imageUrl": "https://i.imgflip.com/1ur9b0.jpg",
+    "category": "classic",
+    "textZones": [
+      { "id": "left", "label": "Novia", "defaultX": 0.15, "defaultY": 0.15, "defaultText": "" },
+      { "id": "center", "label": "Él", "defaultX": 0.5, "defaultY": 0.85, "defaultText": "" },
+      { "id": "right", "label": "Otra", "defaultX": 0.82, "defaultY": 0.25, "defaultText": "" }
+    ]
+  },
+  {
+    "id": "twobuttons",
+    "name": "Two Buttons",
+    "imageUrl": "https://i.imgflip.com/1g8my4.jpg",
+    "category": "reaction",
+    "textZones": [
+      { "id": "btn1", "label": "Botón 1", "defaultX": 0.22, "defaultY": 0.25, "defaultText": "" },
+      { "id": "btn2", "label": "Botón 2", "defaultX": 0.72, "defaultY": 0.25, "defaultText": "" }
+    ]
+  },
+  {
+    "id": "thisisfine",
+    "name": "This is Fine",
+    "imageUrl": "https://i.imgflip.com/wxica.jpg",
+    "category": "reaction",
+    "textZones": [
+      { "id": "top", "label": "Texto", "defaultX": 0.5, "defaultY": 0.1, "defaultText": "Todo está bien" }
+    ]
+  },
+  {
+    "id": "changemymind",
+    "name": "Change My Mind",
+    "imageUrl": "https://i.imgflip.com/24y43o.jpg",
+    "category": "trending",
+    "textZones": [
+      { "id": "sign", "label": "Letrero", "defaultX": 0.5, "defaultY": 0.65, "defaultText": "Escribí tu opinión" }
+    ]
+  },
+  {
+    "id": "exitramp",
+    "name": "Left Exit Ramp",
+    "imageUrl": "https://i.imgflip.com/22bdq6.jpg",
+    "category": "trending",
+    "textZones": [
+      { "id": "straight", "label": "Sigue de frente", "defaultX": 0.75, "defaultY": 0.3, "defaultText": "" },
+      { "id": "exit", "label": "Toma la salida", "defaultX": 0.25, "defaultY": 0.7, "defaultText": "" }
+    ]
+  }
+]
