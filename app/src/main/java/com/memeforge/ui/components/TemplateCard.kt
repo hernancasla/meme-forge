@@ -6,9 +6,11 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import coil.compose.AsyncImage
+import coil.request.ImageRequest
 import com.memeforge.data.model.MemeTemplate
 
 @Composable
@@ -23,12 +25,15 @@ fun TemplateCard(
     ) {
         Column {
             AsyncImage(
-                model = template.imageUrl,
+                model = ImageRequest.Builder(LocalContext.current)
+                    .data(template.imageUrl)
+                    .crossfade(true)
+                    .build(),
                 contentDescription = template.name,
                 modifier = Modifier
                     .fillMaxWidth()
-                    .height(120.dp),
-                contentScale = ContentScale.Crop
+                    .aspectRatio(4f / 3f),
+                contentScale = ContentScale.Fit
             )
             Text(
                 text = template.name,
