@@ -22,7 +22,9 @@ fun TemplateCard(
     modifier: Modifier = Modifier
 ) {
     Card(
-        modifier = modifier.clickable(onClick = onClick),
+        modifier = modifier
+            .fillMaxWidth()
+            .clickable(onClick = onClick),
         elevation = CardDefaults.cardElevation(defaultElevation = 4.dp)
     ) {
         Column {
@@ -35,8 +37,8 @@ fun TemplateCard(
                 contentDescription = template.name,
                 modifier = Modifier
                     .fillMaxWidth()
-                    .aspectRatio(4f / 3f),
-                contentScale = ContentScale.Fit,
+                    .height(130.dp),
+                contentScale = ContentScale.Crop,
                 loading = {
                     Box(
                         modifier = Modifier
