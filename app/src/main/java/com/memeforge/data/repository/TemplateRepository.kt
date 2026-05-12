@@ -47,10 +47,11 @@ class TemplateRepository @Inject constructor(
         )
     )
 
-    // Carga sincrónica: cache local primero, si no existe usa el bundled del APK
-    fun getTemplates(): List<MemeTemplate> = loadCached() ?: loadBundled()
+    // Carga sincrónica: siempre arranca con el bundled del APK (fuente de verdad offline)
+    fun getTemplates(): List<MemeTemplate> = loadBundled()
 
-    // Fetch remoto en background — actualiza el cache y devuelve la lista nueva
+    // Fetch remoto en background — si tiene éxito actualiza el cache y devuelve la lista nueva;
+    // si falla devuelve el cache de la última descarga exitosa, o el bundled como último recurso
     suspend fun refreshTemplates(): List<MemeTemplate> = withContext(Dispatchers.IO) {
         try {
             val connection = URL(remoteUrl).openConnection() as HttpURLConnection
@@ -60,8 +61,7 @@ class TemplateRepository @Inject constructor(
             cacheFile.writeText(body)
             json.decodeFromString(body)
         } catch (e: Exception) {
-            // Sin red o URL no configurada: devuelve lo que ya hay
-            getTemplates()
+            loadCached() ?: loadBundled()
         }
     }
 
