@@ -48,4 +48,3 @@ keystore.properties
 
 # Java heap dumps
 *.hprof
-/app/
