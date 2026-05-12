@@ -70,7 +70,7 @@
   {
     "id": "bart_chalkboard",
     "name": "Bart en la pizarra",
-    "imageUrl": "https://i.imgflip.com/32sg0k.jpg",
+    "imageUrl": "https://i.imgflip.com/28jfk4.jpg",
     "category": "simpsons",
     "textZones": [
       { "id": "line", "label": "Línea en la pizarra", "defaultX": 0.5, "defaultY": 0.5, "defaultText": "No voy a..." }
