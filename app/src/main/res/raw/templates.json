@@ -61,7 +61,7 @@
   {
     "id": "homer_bushes",
     "name": "Homer en los arbustos",
-    "imageUrl": "https://i.imgflip.com/s3vqq7.jpg",
+    "imageUrl": "https://i.imgflip.com/arkmpp.jpg",
     "category": "simpsons",
     "textZones": [
       { "id": "top", "label": "Situación", "defaultX": 0.5, "defaultY": 0.1, "defaultText": "" }
