@@ -27,6 +27,7 @@ fun TemplateCard(
             AsyncImage(
                 model = ImageRequest.Builder(LocalContext.current)
                     .data(template.imageUrl)
+                    .allowHardware(false)
                     .crossfade(true)
                     .build(),
                 contentDescription = template.name,

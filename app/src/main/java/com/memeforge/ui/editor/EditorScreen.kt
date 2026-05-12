@@ -104,7 +104,11 @@ fun EditorScreen(
                         .heightIn(max = 320.dp)
                 )
             } ?: AsyncImage(
-                model = uiState.template?.imageUrl,
+                model = ImageRequest.Builder(context)
+                    .data(uiState.template?.imageUrl)
+                    .allowHardware(false)
+                    .crossfade(true)
+                    .build(),
                 contentDescription = uiState.template?.name,
                 modifier = Modifier
                     .fillMaxWidth()
