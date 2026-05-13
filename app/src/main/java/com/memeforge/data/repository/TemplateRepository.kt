@@ -23,6 +23,9 @@ class TemplateRepository @Inject constructor(
     private val cacheFile: File
         get() = File(context.filesDir, "templates_cache.json")
 
+    /** In-memory snapshot of the most recent successful template list (bundled or remote). */
+    private var liveTemplates: List<MemeTemplate> = emptyList()
+
     private val premiumTemplates = listOf(
         MemeTemplate(
             id = "premium_red",
@@ -48,10 +51,14 @@ class TemplateRepository @Inject constructor(
     )
 
     // Carga sincrónica: siempre arranca con el bundled del APK (fuente de verdad offline)
-    fun getTemplates(): List<MemeTemplate> = loadBundled()
+    fun getTemplates(): List<MemeTemplate> {
+        val bundled = loadBundled()
+        liveTemplates = bundled
+        return bundled
+    }
 
     // Fetch remoto en background — si tiene éxito actualiza el cache y devuelve la lista nueva;
-    // si falla devuelve el cache de la última descarga exitosa, o el bundled como último recurso
+    // si el CDN falla usamos el bundled del APK (no el caché en disco, que puede ser más viejo).
     suspend fun refreshTemplates(): List<MemeTemplate> = withContext(Dispatchers.IO) {
         try {
             val connection = URL(remoteUrl).openConnection() as HttpURLConnection
@@ -59,14 +66,18 @@ class TemplateRepository @Inject constructor(
             connection.readTimeout = 5_000
             val body = connection.inputStream.bufferedReader().use { it.readText() }
             cacheFile.writeText(body)
-            json.decodeFromString(body)
+            val remote: List<MemeTemplate> = json.decodeFromString(body)
+            liveTemplates = remote
+            remote
         } catch (e: Exception) {
-            loadCached() ?: loadBundled()
+            // Caché en disco puede ser más viejo que el bundled → siempre preferir bundled
+            loadBundled().also { liveTemplates = it }
         }
     }
 
+    // Busca en la lista "viva" (puede incluir templates del CDN no presentes en el bundled)
     fun getTemplateById(id: String): MemeTemplate? =
-        (getTemplates() + premiumTemplates).find { it.id == id }
+        (liveTemplates.ifEmpty { loadBundled() } + premiumTemplates).find { it.id == id }
 
     private fun loadCached(): List<MemeTemplate>? {
         if (!cacheFile.exists()) return null
