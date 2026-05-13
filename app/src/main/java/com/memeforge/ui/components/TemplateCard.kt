@@ -1,5 +1,6 @@
 package com.memeforge.ui.components
 
+import android.util.Log
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
@@ -11,6 +12,7 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
+import coil.compose.AsyncImagePainter
 import coil.compose.SubcomposeAsyncImage
 import coil.request.ImageRequest
 import com.memeforge.data.model.MemeTemplate
@@ -28,11 +30,21 @@ fun TemplateCard(
         elevation = CardDefaults.cardElevation(defaultElevation = 4.dp)
     ) {
         Column {
+            val context = LocalContext.current
             SubcomposeAsyncImage(
-                model = ImageRequest.Builder(LocalContext.current)
+                model = ImageRequest.Builder(context)
                     .data(template.imageUrl)
                     .allowHardware(false)
-                    .crossfade(true)
+                    // crossfade removed – can interfere with some JPEG types
+                    .listener(
+                        onError = { _, result ->
+                            Log.e(
+                                "MemeForge-Coil",
+                                "Failed to load thumbnail: ${template.imageUrl}",
+                                result.throwable
+                            )
+                        }
+                    )
                     .build(),
                 contentDescription = template.name,
                 modifier = Modifier
@@ -53,17 +65,33 @@ fun TemplateCard(
                     }
                 },
                 error = {
+                    val errorMsg = (painter.state as? AsyncImagePainter.State.Error)
+                        ?.result?.throwable?.let { t ->
+                            t.message ?: t.javaClass.simpleName
+                        } ?: "Error"
                     Box(
                         modifier = Modifier
                             .fillMaxSize()
                             .background(MaterialTheme.colorScheme.errorContainer),
                         contentAlignment = Alignment.Center
                     ) {
-                        Text(
-                            text = "✕",
-                            color = MaterialTheme.colorScheme.onErrorContainer,
-                            style = MaterialTheme.typography.bodyLarge
-                        )
+                        Column(
+                            horizontalAlignment = Alignment.CenterHorizontally,
+                            modifier = Modifier.padding(horizontal = 4.dp)
+                        ) {
+                            Text(
+                                text = "✕",
+                                color = MaterialTheme.colorScheme.onErrorContainer,
+                                style = MaterialTheme.typography.bodyLarge
+                            )
+                            Text(
+                                text = errorMsg,
+                                color = MaterialTheme.colorScheme.onErrorContainer,
+                                style = MaterialTheme.typography.labelSmall,
+                                maxLines = 3,
+                                overflow = TextOverflow.Ellipsis
+                            )
+                        }
                     }
                 }
             )

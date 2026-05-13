@@ -95,5 +95,14 @@
       { "id": "skinner", "label": "Skinner", "defaultX": 0.25, "defaultY": 0.85, "defaultText": "" },
       { "id": "chalmers", "label": "Chalmers", "defaultX": 0.75, "defaultY": 0.85, "defaultText": "" }
     ]
+  },
+  {
+    "id": "lenny_0_days",
+    "name": "0 Días Sin (Lenny)",
+    "imageUrl": "https://i.imgflip.com/arotcl.jpg",
+    "category": "simpsons",
+    "textZones": [
+      { "id": "counter", "label": "Contador", "defaultX": 0.65, "defaultY": 0.35, "defaultText": "0" }
+    ]
   }
 ]
