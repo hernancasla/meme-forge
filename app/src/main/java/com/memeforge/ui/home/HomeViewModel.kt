@@ -16,7 +16,7 @@ data class HomeUiState(
     val filteredTemplates: List<MemeTemplate> = emptyList(),
     val selectedCategory: String = "all",
     val searchQuery: String = "",
-    val isRefreshing: Boolean = false
+    val isRefreshing: Boolean = true   // true until first emission arrives
 )
 
 @HiltViewModel
@@ -28,20 +28,22 @@ class HomeViewModel @Inject constructor(
     val uiState: StateFlow<HomeUiState> = _uiState.asStateFlow()
 
     init {
-        val local = repository.getTemplates()
-        _uiState.value = HomeUiState(
-            templates = local,
-            filteredTemplates = local,
-            isRefreshing = true
-        )
         viewModelScope.launch {
-            val remote = repository.refreshTemplates()
-            val current = _uiState.value
-            _uiState.value = current.copy(
-                templates = remote,
-                filteredTemplates = filter(remote, current.selectedCategory, current.searchQuery),
-                isRefreshing = false
-            )
+            // streamTemplates() emits up to twice:
+            //   #1 disk cache (or bundled seed) — near-instant
+            //   #2 CDN response — updates list silently if content changed
+            repository.streamTemplates().collect { templates ->
+                val current = _uiState.value
+                _uiState.value = current.copy(
+                    templates = templates,
+                    filteredTemplates = filter(
+                        templates,
+                        current.selectedCategory,
+                        current.searchQuery
+                    ),
+                    isRefreshing = false   // hide spinner after first emission
+                )
+            }
         }
     }
 

@@ -5,13 +5,29 @@ import com.memeforge.R
 import com.memeforge.data.model.MemeTemplate
 import com.memeforge.data.model.TextZone
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.withContext
+import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.flow
+import kotlinx.coroutines.flow.flowOn
 import kotlinx.serialization.json.Json
 import java.io.File
 import java.net.HttpURLConnection
 import java.net.URL
 import javax.inject.Inject
+import javax.inject.Singleton
 
+/**
+ * Single source of truth for meme templates.
+ *
+ * Loading strategy (stale-while-revalidate):
+ *   1. Emit disk cache immediately  → user sees content with zero wait
+ *      (first install: no cache → fall back to bundled APK JSON as seed)
+ *   2. Fetch CDN in background      → emit updated list, overwrite cache
+ *   3. CDN failure                  → keep whatever was emitted in step 1
+ *
+ * Result: new templates pushed to GitHub appear on the next app launch
+ * (after jsDelivr propagates, ~5–10 min) — no recompile ever needed.
+ */
+@Singleton
 class TemplateRepository @Inject constructor(
     private val context: Context
 ) {
@@ -23,9 +39,11 @@ class TemplateRepository @Inject constructor(
     private val cacheFile: File
         get() = File(context.filesDir, "templates_cache.json")
 
-    /** In-memory snapshot of the most recent successful template list (bundled or remote). */
+    /** In-memory snapshot kept in sync by streamTemplates(); used by getTemplateById(). */
+    @Volatile
     private var liveTemplates: List<MemeTemplate> = emptyList()
 
+    // Keep premium templates separate; they are never fetched remotely.
     private val premiumTemplates = listOf(
         MemeTemplate(
             id = "premium_red",
@@ -50,45 +68,56 @@ class TemplateRepository @Inject constructor(
         )
     )
 
-    // Carga sincrónica: siempre arranca con el bundled del APK (fuente de verdad offline)
-    fun getTemplates(): List<MemeTemplate> {
-        val bundled = loadBundled()
-        liveTemplates = bundled
-        return bundled
-    }
+    /**
+     * Cold Flow that implements stale-while-revalidate:
+     *
+     *  emit #1 — disk cache (fast, offline-capable) or bundled seed on first install
+     *  emit #2 — CDN response when it arrives (may be same list or contain new templates)
+     *
+     * Collectors always get fresh content as soon as it is available.
+     */
+    fun streamTemplates(): Flow<List<MemeTemplate>> = flow {
+        // ── Step 1: serve from disk immediately ──────────────────────────────
+        val initial = loadCached() ?: loadBundled()
+        liveTemplates = initial
+        emit(initial)
 
-    // Fetch remoto en background — si tiene éxito actualiza el cache y devuelve la lista nueva;
-    // si el CDN falla usamos el bundled del APK (no el caché en disco, que puede ser más viejo).
-    suspend fun refreshTemplates(): List<MemeTemplate> = withContext(Dispatchers.IO) {
+        // ── Step 2: refresh from CDN in background ───────────────────────────
         try {
             val connection = URL(remoteUrl).openConnection() as HttpURLConnection
-            connection.connectTimeout = 5_000
-            connection.readTimeout = 5_000
+            connection.connectTimeout = 8_000
+            connection.readTimeout = 8_000
             val body = connection.inputStream.bufferedReader().use { it.readText() }
-            cacheFile.writeText(body)
             val remote: List<MemeTemplate> = json.decodeFromString(body)
+            cacheFile.writeText(body)          // persist for next cold start
             liveTemplates = remote
-            remote
-        } catch (e: Exception) {
-            // Caché en disco puede ser más viejo que el bundled → siempre preferir bundled
-            loadBundled().also { liveTemplates = it }
+            emit(remote)
+        } catch (_: Exception) {
+            // Network/CDN unavailable — initial list is already showing, nothing to do
         }
-    }
+    }.flowOn(Dispatchers.IO)
 
-    // Busca en la lista "viva" (puede incluir templates del CDN no presentes en el bundled)
+    /**
+     * Looks up a single template by id.
+     * Uses the in-memory live list so CDN-only templates (not yet in the bundled APK)
+     * are always reachable from the editor.
+     */
     fun getTemplateById(id: String): MemeTemplate? =
         (liveTemplates.ifEmpty { loadBundled() } + premiumTemplates).find { it.id == id }
+
+    // ── Private helpers ───────────────────────────────────────────────────────
 
     private fun loadCached(): List<MemeTemplate>? {
         if (!cacheFile.exists()) return null
         return try {
             json.decodeFromString(cacheFile.readText())
-        } catch (e: Exception) {
+        } catch (_: Exception) {
             cacheFile.delete()
             null
         }
     }
 
+    /** Last-resort seed: used only on first install when there is no disk cache. */
     private fun loadBundled(): List<MemeTemplate> {
         val stream = context.resources.openRawResource(R.raw.templates)
         return json.decodeFromString(stream.bufferedReader().use { it.readText() })
