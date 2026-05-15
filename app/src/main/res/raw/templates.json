@@ -104,5 +104,16 @@
     "textZones": [
       { "id": "counter", "label": "Contador", "defaultX": 0.65, "defaultY": 0.35, "defaultText": "0" }
     ]
+  },
+  {
+    "id": "bart_clase",
+    "name": "Bart Hace Reír a la Clase",
+    "imageUrl": "https://i.imgflip.com/176h0h.jpg",
+    "category": "simpsons",
+    "textZones": [
+      { "id": "panel1", "label": "La clase (panel 1)", "defaultX": 0.5, "defaultY": 0.1, "defaultText": "" },
+      { "id": "panel2", "label": "Bart dice (panel 2)", "defaultX": 0.5, "defaultY": 0.5, "defaultText": "" },
+      { "id": "panel3", "label": "Reacción clase (panel 3)", "defaultX": 0.5, "defaultY": 0.88, "defaultText": "" }
+    ]
   }
 ]
