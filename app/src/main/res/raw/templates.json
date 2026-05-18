@@ -106,6 +106,16 @@
     ]
   },
   {
+    "id": "pelea_caos",
+    "name": "Pelea de Monos (Simpsons)",
+    "imageUrl": "https://i.imgflip.com/2et6ki.jpg",
+    "category": "simpsons",
+    "textZones": [
+      { "id": "top",    "label": "Situación",  "defaultX": 0.5, "defaultY": 0.05, "defaultText": "" },
+      { "id": "bottom", "label": "Resultado",  "defaultX": 0.5, "defaultY": 0.95, "defaultText": "" }
+    ]
+  },
+  {
     "id": "bart_clase",
     "name": "Bart Hace Reír a la Clase",
     "imageUrl": "https://i.imgflip.com/176h0h.jpg",
