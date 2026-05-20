@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- App -->
+    <string name="app_name">MemeForge</string>
+
+    <!-- Home -->
+    <string name="search_hint">Buscar plantillas…</string>
+    <string name="category_all">Todas</string>
+    <string name="category_simpsons">Simpsons</string>
+    <string name="category_classic">Clásicos</string>
+    <string name="category_trending">Tendencia</string>
+    <string name="category_reaction">Reacción</string>
+
+    <!-- Editor -->
+    <string name="template_editor">Editor de memes</string>
+    <string name="btn_preview">Ver preview</string>
+    <string name="btn_save">Guardar</string>
+    <string name="btn_share">Compartir</string>
+    <string name="btn_create_sticker">Crear Sticker</string>
+    <string name="share_meme">Compartir meme</string>
+    <string name="share_sticker">Compartir como sticker</string>
+    <string name="saving">Guardando…</string>
+    <string name="saved_successfully">¡Meme guardado en la galería!</string>
+    <string name="error_saving">Error al guardar</string>
+    <string name="error_loading">Error al cargar la plantilla</string>
+    <string name="ok">OK</string>
+</resources>

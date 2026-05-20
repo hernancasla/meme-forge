@@ -77,26 +77,6 @@
     ]
   },
   {
-    "id": "comic_book_guy",
-    "name": "Comic Book Guy",
-    "imageUrl": "https://i.imgflip.com/4t0m5.jpg",
-    "category": "simpsons",
-    "textZones": [
-      { "id": "top", "label": "Peor...", "defaultX": 0.5, "defaultY": 0.15, "defaultText": "Peor" },
-      { "id": "bottom", "label": "...del mundo", "defaultX": 0.5, "defaultY": 0.85, "defaultText": "del mundo" }
-    ]
-  },
-  {
-    "id": "steamed_hams",
-    "name": "Steamed Hams",
-    "imageUrl": "https://i.imgflip.com/3lmzyx.jpg",
-    "category": "simpsons",
-    "textZones": [
-      { "id": "skinner", "label": "Skinner", "defaultX": 0.25, "defaultY": 0.85, "defaultText": "" },
-      { "id": "chalmers", "label": "Chalmers", "defaultX": 0.75, "defaultY": 0.85, "defaultText": "" }
-    ]
-  },
-  {
     "id": "lenny_0_days",
     "name": "0 Días Sin (Lenny)",
     "imageUrl": "https://i.imgflip.com/arotcl.jpg",

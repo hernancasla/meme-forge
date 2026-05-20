@@ -73,7 +73,7 @@ fun EditorScreen(
             title = { Text(stringResource(R.string.error_saving)) },
             text = { Text(error) },
             confirmButton = {
-                TextButton(onClick = viewModel::clearError) { Text("OK") }
+                TextButton(onClick = viewModel::clearError) { Text(stringResource(R.string.ok)) }
             }
         )
     }
