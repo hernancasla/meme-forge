@@ -111,9 +111,9 @@
     "imageUrl": "https://i.imgflip.com/2vtfb6.png",
     "category": "simpsons",
     "textZones": [
-      { "id": "left",   "label": "Lo que debería hacer", "defaultX": 0.14, "defaultY": 0.82, "defaultText": "" },
-      { "id": "center", "label": "Él",                   "defaultX": 0.50, "defaultY": 0.10, "defaultText": "" },
-      { "id": "right",  "label": "La tentación",         "defaultX": 0.84, "defaultY": 0.82, "defaultText": "" }
+      { "id": "left",   "label": "Tentación 1",          "defaultX": 0.14, "defaultY": 0.82, "defaultText": "" },
+      { "id": "center", "label": "Lo que debería hacer", "defaultX": 0.50, "defaultY": 0.10, "defaultText": "" },
+      { "id": "right",  "label": "Tentación 2",          "defaultX": 0.84, "defaultY": 0.82, "defaultText": "" }
     ]
   },
   {
