@@ -59,7 +59,9 @@ Devolvé ÚNICAMENTE un objeto JSON válido con esta estructura:
       "label": "Etiqueta en español para el editor",
       "defaultX": 0.5,
       "defaultY": 0.1,
-      "defaultText": ""
+      "defaultText": "",
+      "maxWidthRatio": 0.9,
+      "maxHeightRatio": 0.35
     }}
   ]
 }}
@@ -71,6 +73,13 @@ Instrucciones:
   - "label": etiqueta en español que verá el usuario al editar.
   - "defaultX" / "defaultY": posición relativa del centro del bloque (0.0 = izq/arriba, 1.0 = der/abajo).
   - "defaultText": texto de ejemplo si existe un texto típico; si no, cadena vacía "".
+  - "maxWidthRatio" / "maxHeightRatio": ancho y alto disponibles para ESE bloque de texto,
+    como fracción del ancho/alto total de la imagen (0.0–1.0). El motor envuelve el texto en
+    líneas y reduce el tamaño de fuente automáticamente para que nunca se salga de esta caja,
+    así que definila del tamaño real del área libre (por ejemplo, una pizarra angosta, o un
+    espacio acotado entre dos personajes) y no del área completa de la imagen. Si el fondo
+    alrededor del punto (defaultX, defaultY) está despejado en todas direcciones, podés omitir
+    ambos campos: el motor calcula una caja segura automáticamente a partir de la posición.
 - Solo incluí las zonas que realmente se usan en este tipo de meme.
 - No incluyas markdown, bloques de código ni explicaciones extra; solo el JSON.\
 """
@@ -247,7 +256,10 @@ def main() -> None:
 
     print(f"\n✅  Identificado: \"{name}\"")
     for z in text_zones:
-        print(f"    • {z['id']:10s}  ({z['defaultX']:.2f}, {z['defaultY']:.2f})  '{z['label']}'")
+        box = ""
+        if "maxWidthRatio" in z or "maxHeightRatio" in z:
+            box = f"  box={z.get('maxWidthRatio', '?')}x{z.get('maxHeightRatio', '?')}"
+        print(f"    • {z['id']:10s}  ({z['defaultX']:.2f}, {z['defaultY']:.2f})  '{z['label']}'{box}")
 
     # ---- Build entry -----------------------------------------------------
     templates    = load_templates(TEMPLATES_PUBLIC)
@@ -294,8 +306,24 @@ def main() -> None:
         "https://cdn.jsdelivr.net/gh/hernancasla/meme-forge@main"
         "/templates/templates.json"
     )
+
+    # ---- Purge jsDelivr cache (GET) so the new template is live immediately --
+    print("\n🌐  Purgando caché de jsDelivr…")
+    try:
+        purge_url = cdn_url.replace(
+            "cdn.jsdelivr.net", "purge.jsdelivr.net"
+        )
+        req = urllib.request.Request(purge_url)
+        with urllib.request.urlopen(req, timeout=10) as resp:
+            body = resp.read().decode()
+            if '"success":true' in body.replace(" ", ""):
+                print("    ✅  Caché purgado — disponible ahora.")
+            else:
+                print(f"    ⚠️  Respuesta inesperada: {body[:120]}")
+    except Exception as exc:
+        print(f"    ⚠️  Purge falló (no crítico, propaga en ~10 min): {exc}")
+
     print(f"\n🎉  ¡Listo! Template '{name}' (id: {entry_id}) pusheado a main.")
-    print(f"    Disponible vía CDN en ~10 min:")
     print(f"    {cdn_url}")
 
 

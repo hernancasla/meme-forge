@@ -73,7 +73,7 @@
     "imageUrl": "https://i.imgflip.com/28jfk4.jpg",
     "category": "simpsons",
     "textZones": [
-      { "id": "line", "label": "Línea en la pizarra", "defaultX": 0.5, "defaultY": 0.5, "defaultText": "No voy a..." }
+      { "id": "line", "label": "Línea en la pizarra", "defaultX": 0.34, "defaultY": 0.48, "defaultText": "No voy a...", "maxWidthRatio": 0.54, "maxHeightRatio": 0.78 }
     ]
   },
   {
@@ -115,6 +115,15 @@
       { "id": "panel1", "label": "La clase (panel 1)", "defaultX": 0.5, "defaultY": 0.1, "defaultText": "" },
       { "id": "panel2", "label": "Bart dice (panel 2)", "defaultX": 0.5, "defaultY": 0.5, "defaultText": "" },
       { "id": "panel3", "label": "Reacción clase (panel 3)", "defaultX": 0.5, "defaultY": 0.88, "defaultText": "" }
+    ]
+  },
+  {
+    "id": "homero_babeando",
+    "name": "Homero Babeando",
+    "imageUrl": "https://i.imgflip.com/9czz.jpg",
+    "category": "simpsons",
+    "textZones": [
+      { "id": "top", "label": "Texto", "defaultX": 0.5, "defaultY": 0.1, "defaultText": "" }
     ]
   }
 ]

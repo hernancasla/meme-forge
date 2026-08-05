@@ -17,5 +17,9 @@ data class TextZone(
     val label: String,
     val defaultX: Float,
     val defaultY: Float,
-    val defaultText: String
+    val defaultText: String,
+    /** Width of the box the text must wrap/shrink to fit, as a fraction of the image width. */
+    val maxWidthRatio: Float? = null,
+    /** Height of the box the text must wrap/shrink to fit, as a fraction of the image height. */
+    val maxHeightRatio: Float? = null
 )

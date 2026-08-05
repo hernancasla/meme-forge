@@ -19,6 +19,7 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import javax.inject.Inject
+import kotlin.math.min
 
 data class EditorUiState(
     val template: MemeTemplate? = null,
@@ -45,7 +46,9 @@ class EditorViewModel @Inject constructor(
                 zoneId = zone.id,
                 content = zone.defaultText,
                 xRatio = zone.defaultX,
-                yRatio = zone.defaultY
+                yRatio = zone.defaultY,
+                maxWidthRatio = zone.maxWidthRatio ?: safeBoxRatio(zone.defaultX),
+                maxHeightRatio = zone.maxHeightRatio ?: safeBoxRatio(zone.defaultY)
             )
         }
         _uiState.value = _uiState.value.copy(template = template, memeTexts = initialTexts)
@@ -118,4 +121,12 @@ class EditorViewModel @Inject constructor(
     fun clearError() {
         _uiState.value = _uiState.value.copy(error = null)
     }
+
+    /**
+     * When a template doesn't declare an explicit maxWidthRatio/maxHeightRatio for a zone,
+     * derive a safe box from its anchor position so text always wraps before running off
+     * the nearest edge of the image, instead of overflowing it.
+     */
+    private fun safeBoxRatio(anchorRatio: Float): Float =
+        (min(anchorRatio, 1f - anchorRatio) * 2f).coerceIn(0.3f, 0.94f)
 }
