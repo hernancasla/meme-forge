@@ -43,7 +43,7 @@
     "id": "changemymind",
     "name": "Change My Mind",
     "imageUrl": "https://i.imgflip.com/24y43o.jpg",
-    "category": "trending",
+    "category": "classic",
     "textZones": [
       { "id": "sign", "label": "Letrero", "defaultX": 0.5, "defaultY": 0.65, "defaultText": "Escribí tu opinión" }
     ]
@@ -52,7 +52,7 @@
     "id": "exitramp",
     "name": "Left Exit Ramp",
     "imageUrl": "https://i.imgflip.com/22bdq6.jpg",
-    "category": "trending",
+    "category": "classic",
     "textZones": [
       { "id": "straight", "label": "Sigue de frente", "defaultX": 0.75, "defaultY": 0.3, "defaultText": "" },
       { "id": "exit", "label": "Toma la salida", "defaultX": 0.25, "defaultY": 0.7, "defaultText": "" }
@@ -130,7 +130,7 @@
     "id": "no_se_puede_simplemente",
     "name": "Uno No Puede Simplemente",
     "imageUrl": "https://imgflip.com/s/meme/One-Does-Not-Simply.jpg",
-    "category": "trending",
+    "category": "classic",
     "textZones": [
       { "id": "top", "label": "Texto superior", "defaultX": 0.375, "defaultY": 0.104, "defaultText": "Uno no puede simplemente" },
       { "id": "bottom", "label": "Texto inferior", "defaultX": 0.375, "defaultY": 0.620, "defaultText": "" }
@@ -140,7 +140,7 @@
     "id": "aliens_antiguos",
     "name": "Aliens Antiguos",
     "imageUrl": "https://imgflip.com/s/meme/Ancient-Aliens.jpg",
-    "category": "trending",
+    "category": "classic",
     "textZones": [
       { "id": "top", "label": "Situación", "defaultX": 0.456, "defaultY": 0.123, "defaultText": "" },
       { "id": "bottom", "label": "Conclusión", "defaultX": 0.456, "defaultY": 0.770, "defaultText": "Aliens" }
@@ -150,7 +150,7 @@
     "id": "nina_desastre",
     "name": "Niña del Desastre",
     "imageUrl": "https://imgflip.com/s/meme/Disaster-Girl.jpg",
-    "category": "trending",
+    "category": "classic",
     "textZones": [
       { "id": "top", "label": "Texto superior", "defaultX": 0.423, "defaultY": 0.114, "defaultText": "" },
       { "id": "bottom", "label": "Texto inferior", "defaultX": 0.423, "defaultY": 0.708, "defaultText": "" }
@@ -160,7 +160,7 @@
     "id": "batman_cachetada_robin",
     "name": "Batman Cacheteando a Robin",
     "imageUrl": "https://imgflip.com/s/meme/Batman-Slapping-Robin.jpg",
-    "category": "trending",
+    "category": "classic",
     "textZones": [
       { "id": "left", "label": "Robin dice", "defaultX": 0.242, "defaultY": 0.098, "defaultText": "" },
       { "id": "right", "label": "Batman responde", "defaultX": 0.737, "defaultY": 0.098, "defaultText": "" }
@@ -170,7 +170,7 @@
     "id": "spongebob_burlon",
     "name": "Spongebob Burlón",
     "imageUrl": "https://imgflip.com/s/meme/Mocking-Spongebob.jpg",
-    "category": "trending",
+    "category": "classic",
     "textZones": [
       { "id": "top", "label": "Frase original", "defaultX": 0.409, "defaultY": 0.107, "defaultText": "" },
       { "id": "bottom", "label": "Burla (mAyUsCuLiTaS)", "defaultX": 0.409, "defaultY": 0.703, "defaultText": "" }
@@ -180,7 +180,7 @@
     "id": "mujer_gritandole_al_gato",
     "name": "Mujer Gritándole al Gato",
     "imageUrl": "https://imgflip.com/s/meme/Woman-Yelling-At-Cat.jpg",
-    "category": "trending",
+    "category": "classic",
     "textZones": [
       { "id": "left", "label": "Mujer grita", "defaultX": 0.179, "defaultY": 0.076, "defaultText": "" },
       { "id": "right", "label": "Gato responde", "defaultX": 0.540, "defaultY": 0.076, "defaultText": "" }
@@ -190,7 +190,7 @@
     "id": "apreton_de_manos_epico",
     "name": "Apretón de Manos Épico",
     "imageUrl": "https://imgflip.com/s/meme/Epic-Handshake.jpg",
-    "category": "trending",
+    "category": "classic",
     "textZones": [
       { "id": "top", "label": "Interés en común", "defaultX": 0.270, "defaultY": 0.136, "defaultText": "" },
       { "id": "left", "label": "Persona 1", "defaultX": 0.152, "defaultY": 0.466, "defaultText": "" },
@@ -201,7 +201,7 @@
     "id": "esqueleto_esperando",
     "name": "Esqueleto Esperando",
     "imageUrl": "https://imgflip.com/s/meme/Waiting-Skeleton.jpg",
-    "category": "trending",
+    "category": "classic",
     "textZones": [
       { "id": "top", "label": "Situación", "defaultX": 0.488, "defaultY": 0.128, "defaultText": "" },
       { "id": "bottom", "label": "Esperando desde", "defaultX": 0.488, "defaultY": 0.835, "defaultText": "" }
@@ -211,7 +211,7 @@
     "id": "pablo_escobar_triste",
     "name": "Pablo Escobar Triste",
     "imageUrl": "https://imgflip.com/s/meme/Sad-Pablo-Escobar.jpg",
-    "category": "trending",
+    "category": "classic",
     "textZones": [
       { "id": "top", "label": "Situación", "defaultX": 0.475, "defaultY": 0.400, "defaultText": "" },
       { "id": "bottom_left", "label": "Opción izquierda", "defaultX": 0.238, "defaultY": 0.851, "defaultText": "" },
@@ -222,7 +222,7 @@
     "id": "marcado_a_salvo_de",
     "name": "Marcado a Salvo de...",
     "imageUrl": "https://imgflip.com/s/meme/Marked-Safe-From.jpg",
-    "category": "trending",
+    "category": "classic",
     "textZones": [
       { "id": "evento", "label": "Evento", "defaultX": 0.414, "defaultY": 0.138, "defaultText": "" },
       { "id": "comentario", "label": "Comentario", "defaultX": 0.389, "defaultY": 0.476, "defaultText": "" }
@@ -232,7 +232,7 @@
     "id": "x_por_todos_lados",
     "name": "X, X Por Todos Lados",
     "imageUrl": "https://imgflip.com/s/meme/X-X-Everywhere.jpg",
-    "category": "trending",
+    "category": "classic",
     "textZones": [
       { "id": "top", "label": "Texto superior", "defaultX": 0.332, "defaultY": 0.091, "defaultText": "" },
       { "id": "bottom", "label": "Texto inferior", "defaultX": 0.332, "defaultY": 0.553, "defaultText": "por todos lados" }
@@ -242,7 +242,7 @@
     "id": "tenes_mas_de_eso",
     "name": "¿Tenés Más de Eso?",
     "imageUrl": "https://imgflip.com/s/meme/Yall-Got-Any-More-Of-That.jpg",
-    "category": "trending",
+    "category": "classic",
     "textZones": [
       { "id": "top", "label": "Texto superior", "defaultX": 0.407, "defaultY": 0.110, "defaultText": "" },
       { "id": "bottom", "label": "Texto inferior", "defaultX": 0.407, "defaultY": 0.684, "defaultText": "" }
@@ -252,7 +252,7 @@
     "id": "caida_de_bici",
     "name": "Caída de Bici",
     "imageUrl": "https://imgflip.com/s/meme/Bike-Fall.jpg",
-    "category": "trending",
+    "category": "classic",
     "textZones": [
       { "id": "top", "label": "Antes de la caída", "defaultX": 0.710, "defaultY": 0.234, "defaultText": "" },
       { "id": "middle", "label": "Durante la caída", "defaultX": 0.251, "defaultY": 0.568, "defaultText": "" },
@@ -263,7 +263,7 @@
     "id": "aqui_pondria_mi_trofeo",
     "name": "Aquí Pondría Mi Trofeo (Si Tuviera Uno)",
     "imageUrl": "https://imgflip.com/s/meme/This-Is-Where-Id-Put-My-Trophy-If-I-Had-One.jpg",
-    "category": "trending",
+    "category": "classic",
     "textZones": [
       { "id": "top", "label": "Texto superior", "defaultX": 0.488, "defaultY": 0.128, "defaultText": "" },
       { "id": "bottom", "label": "Texto inferior", "defaultX": 0.488, "defaultY": 0.836, "defaultText": "" }
@@ -285,7 +285,7 @@
     "id": "todos_reciben_uno_oprah",
     "name": "Todos Reciben Uno (Oprah)",
     "imageUrl": "https://imgflip.com/s/meme/Oprah-You-Get-A.jpg",
-    "category": "trending",
+    "category": "classic",
     "textZones": [
       { "id": "top", "label": "Texto superior", "defaultX": 0.394, "defaultY": 0.107, "defaultText": "" },
       { "id": "bottom", "label": "Texto inferior", "defaultX": 0.394, "defaultY": 0.659, "defaultText": "¡Todos reciben uno!" }
@@ -295,7 +295,7 @@
     "id": "son_la_misma_foto",
     "name": "Son la Misma Foto",
     "imageUrl": "https://imgflip.com/s/meme/Theyre-The-Same-Picture.jpg",
-    "category": "trending",
+    "category": "classic",
     "textZones": [
       { "id": "imagen1", "label": "Imagen 1", "defaultX": 0.268, "defaultY": 0.188, "defaultText": "" },
       { "id": "imagen2", "label": "Imagen 2", "defaultX": 0.763, "defaultY": 0.246, "defaultText": "" },
@@ -326,7 +326,7 @@
     "id": "uno_roba_25",
     "name": "UNO: Robá 25 Cartas",
     "imageUrl": "https://imgflip.com/s/meme/UNO-Draw-25-Cards.jpg",
-    "category": "trending",
+    "category": "classic",
     "textZones": [
       { "id": "top", "label": "Situación", "defaultX": 0.736, "defaultY": 0.066, "defaultText": "" },
       { "id": "carta", "label": "Carta UNO +25", "defaultX": 0.293, "defaultY": 0.390, "defaultText": "+25" }
@@ -383,7 +383,7 @@
     "id": "es_esto_una_paloma",
     "name": "¿Es Esto una Paloma?",
     "imageUrl": "https://imgflip.com/s/meme/Is-This-A-Pigeon.jpg",
-    "category": "trending",
+    "category": "classic",
     "textZones": [
       { "id": "top", "label": "Personaje", "defaultX": 0.244, "defaultY": 0.123, "defaultText": "" },
       { "id": "middle", "label": "Objeto (insecto)", "defaultX": 0.679, "defaultY": 0.374, "defaultText": "" },
@@ -404,7 +404,7 @@
     "id": "madre_ignora_nino_ahogandose",
     "name": "Madre Ignora a Niño Ahogándose",
     "imageUrl": "https://i.imgflip.com/46hhvr.jpg",
-    "category": "trending",
+    "category": "classic",
     "textZones": [
       { "id": "madre", "label": "Madre", "defaultX": 0.488, "defaultY": 0.319, "defaultText": "" },
       { "id": "actividad", "label": "Actividad", "defaultX": 0.842, "defaultY": 0.381, "defaultText": "" },
@@ -416,7 +416,7 @@
     "id": "cerebro_expandiendose",
     "name": "Cerebro Expandiéndose",
     "imageUrl": "https://imgflip.com/s/meme/Expanding-Brain.jpg",
-    "category": "trending",
+    "category": "classic",
     "textZones": [
       { "id": "nivel1", "label": "Nivel 1 (básico)", "defaultX": 0.239, "defaultY": 0.120, "defaultText": "" },
       { "id": "nivel2", "label": "Nivel 2", "defaultX": 0.239, "defaultY": 0.369, "defaultText": "" },
@@ -438,7 +438,7 @@
     "id": "calamardo_en_la_ventana",
     "name": "Calamardo en la Ventana",
     "imageUrl": "https://i.imgflip.com/145qvv.jpg",
-    "category": "trending",
+    "category": "classic",
     "textZones": [
       { "id": "top", "label": "Situación (Calamardo espía)", "defaultX": 0.192, "defaultY": 0.256, "defaultText": "" },
       { "id": "bottom", "label": "Comentario", "defaultX": 0.581, "defaultY": 0.502, "defaultText": "" }
@@ -448,7 +448,7 @@
     "id": "pooh_con_esmoquin",
     "name": "Pooh con Esmoquin",
     "imageUrl": "https://imgflip.com/s/meme/Tuxedo-Winnie-The-Pooh.png",
-    "category": "trending",
+    "category": "classic",
     "textZones": [
       { "id": "simple", "label": "Versión simple", "defaultX": 0.508, "defaultY": 0.176, "defaultText": "" },
       { "id": "elegante", "label": "Versión elegante", "defaultX": 0.508, "defaultY": 0.536, "defaultText": "" }
