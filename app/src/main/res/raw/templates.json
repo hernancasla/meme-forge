@@ -1,686 +1,188 @@
 [
   {
-    "id": "drake",
-    "name": "Drake Pointing",
-    "imageUrl": "https://i.imgflip.com/30b1gx.jpg",
-    "category": "classic",
-    "textZones": [
-      {
-        "id": "top",
-        "label": "Rechaza",
-        "defaultX": 0.75,
-        "defaultY": 0.25,
-        "defaultText": "Escribí algo aquí"
-      },
-      {
-        "id": "bottom",
-        "label": "Prefiere",
-        "defaultX": 0.75,
-        "defaultY": 0.75,
-        "defaultText": "Escribí algo aquí"
-      }
-    ]
-  },
-  {
-    "id": "distracted",
-    "name": "Distracted Boyfriend",
-    "imageUrl": "https://i.imgflip.com/1ur9b0.jpg",
-    "category": "classic",
-    "textZones": [
-      {
-        "id": "left",
-        "label": "Novia",
-        "defaultX": 0.15,
-        "defaultY": 0.15,
-        "defaultText": ""
-      },
-      {
-        "id": "center",
-        "label": "Él",
-        "defaultX": 0.5,
-        "defaultY": 0.85,
-        "defaultText": ""
-      },
-      {
-        "id": "right",
-        "label": "Otra",
-        "defaultX": 0.82,
-        "defaultY": 0.25,
-        "defaultText": ""
-      }
-    ]
-  },
-  {
-    "id": "twobuttons",
-    "name": "Two Buttons",
-    "imageUrl": "https://i.imgflip.com/1g8my4.jpg",
+    "id": "no_se_puede_simplemente",
+    "name": "Uno No Puede Simplemente",
+    "imageUrl": "https://imgflip.com/s/meme/One-Does-Not-Simply.jpg",
     "category": "trending",
     "textZones": [
-      {
-        "id": "btn1",
-        "label": "Botón 1",
-        "defaultX": 0.22,
-        "defaultY": 0.25,
-        "defaultText": ""
-      },
-      {
-        "id": "btn2",
-        "label": "Botón 2",
-        "defaultX": 0.72,
-        "defaultY": 0.25,
-        "defaultText": ""
-      }
+      { "id": "top", "label": "Texto superior", "defaultX": 0.375, "defaultY": 0.104, "defaultText": "Uno no puede simplemente" },
+      { "id": "bottom", "label": "Texto inferior", "defaultX": 0.375, "defaultY": 0.620, "defaultText": "" }
     ]
   },
   {
-    "id": "thisisfine",
-    "name": "This is Fine",
-    "imageUrl": "https://i.imgflip.com/wxica.jpg",
+    "id": "aliens_antiguos",
+    "name": "Aliens Antiguos",
+    "imageUrl": "https://imgflip.com/s/meme/Ancient-Aliens.jpg",
     "category": "trending",
     "textZones": [
-      {
-        "id": "top",
-        "label": "Texto",
-        "defaultX": 0.5,
-        "defaultY": 0.1,
-        "defaultText": "Todo está bien"
-      }
+      { "id": "top", "label": "Situación", "defaultX": 0.456, "defaultY": 0.123, "defaultText": "" },
+      { "id": "bottom", "label": "Conclusión", "defaultX": 0.456, "defaultY": 0.770, "defaultText": "Aliens" }
     ]
   },
   {
-    "id": "changemymind",
-    "name": "Change My Mind",
-    "imageUrl": "https://i.imgflip.com/24y43o.jpg",
+    "id": "nina_desastre",
+    "name": "Niña del Desastre",
+    "imageUrl": "https://imgflip.com/s/meme/Disaster-Girl.jpg",
     "category": "trending",
     "textZones": [
-      {
-        "id": "sign",
-        "label": "Letrero",
-        "defaultX": 0.5,
-        "defaultY": 0.65,
-        "defaultText": "Escribí tu opinión"
-      }
+      { "id": "top", "label": "Texto superior", "defaultX": 0.423, "defaultY": 0.114, "defaultText": "" },
+      { "id": "bottom", "label": "Texto inferior", "defaultX": 0.423, "defaultY": 0.708, "defaultText": "" }
     ]
   },
   {
-    "id": "exitramp",
-    "name": "Left Exit Ramp",
-    "imageUrl": "https://i.imgflip.com/22bdq6.jpg",
+    "id": "batman_cachetada_robin",
+    "name": "Batman Cacheteando a Robin",
+    "imageUrl": "https://imgflip.com/s/meme/Batman-Slapping-Robin.jpg",
     "category": "trending",
     "textZones": [
-      {
-        "id": "straight",
-        "label": "Sigue de frente",
-        "defaultX": 0.75,
-        "defaultY": 0.3,
-        "defaultText": ""
-      },
-      {
-        "id": "exit",
-        "label": "Toma la salida",
-        "defaultX": 0.25,
-        "defaultY": 0.7,
-        "defaultText": ""
-      }
+      { "id": "left", "label": "Robin dice", "defaultX": 0.242, "defaultY": 0.098, "defaultText": "" },
+      { "id": "right", "label": "Batman responde", "defaultX": 0.737, "defaultY": 0.098, "defaultText": "" }
     ]
   },
   {
-    "id": "homer_bushes",
-    "name": "Homer en los arbustos",
-    "imageUrl": "https://i.imgflip.com/arkmpp.jpg",
-    "category": "simpsons",
+    "id": "spongebob_burlon",
+    "name": "Spongebob Burlón",
+    "imageUrl": "https://imgflip.com/s/meme/Mocking-Spongebob.jpg",
+    "category": "trending",
     "textZones": [
-      {
-        "id": "top",
-        "label": "Situación",
-        "defaultX": 0.5,
-        "defaultY": 0.1,
-        "defaultText": ""
-      }
+      { "id": "top", "label": "Frase original", "defaultX": 0.409, "defaultY": 0.107, "defaultText": "" },
+      { "id": "bottom", "label": "Burla (mAyUsCuLiTaS)", "defaultX": 0.409, "defaultY": 0.703, "defaultText": "" }
     ]
   },
   {
-    "id": "bart_chalkboard",
-    "name": "Bart en la pizarra",
-    "imageUrl": "https://i.imgflip.com/28jfk4.jpg",
-    "category": "simpsons",
+    "id": "mujer_gritandole_al_gato",
+    "name": "Mujer Gritándole al Gato",
+    "imageUrl": "https://imgflip.com/s/meme/Woman-Yelling-At-Cat.jpg",
+    "category": "trending",
     "textZones": [
-      {
-        "id": "line",
-        "label": "Línea en la pizarra",
-        "defaultX": 0.34,
-        "defaultY": 0.48,
-        "defaultText": "No voy a...",
-        "maxWidthRatio": 0.54,
-        "maxHeightRatio": 0.78
-      }
+      { "id": "left", "label": "Mujer grita", "defaultX": 0.179, "defaultY": 0.076, "defaultText": "" },
+      { "id": "right", "label": "Gato responde", "defaultX": 0.540, "defaultY": 0.076, "defaultText": "" }
     ]
   },
   {
-    "id": "lenny_0_days",
-    "name": "0 Días Sin (Lenny)",
-    "imageUrl": "https://i.imgflip.com/arotcl.jpg",
-    "category": "simpsons",
+    "id": "apreton_de_manos_epico",
+    "name": "Apretón de Manos Épico",
+    "imageUrl": "https://imgflip.com/s/meme/Epic-Handshake.jpg",
+    "category": "trending",
     "textZones": [
-      {
-        "id": "counter",
-        "label": "Contador",
-        "defaultX": 0.65,
-        "defaultY": 0.35,
-        "defaultText": "0"
-      }
+      { "id": "top", "label": "Interés en común", "defaultX": 0.270, "defaultY": 0.136, "defaultText": "" },
+      { "id": "left", "label": "Persona 1", "defaultX": 0.152, "defaultY": 0.466, "defaultText": "" },
+      { "id": "right", "label": "Persona 2", "defaultX": 0.491, "defaultY": 0.417, "defaultText": "" }
     ]
   },
   {
-    "id": "skinner_tentado",
-    "name": "Skinner Tentado",
-    "imageUrl": "https://i.imgflip.com/2vtfb6.png",
-    "category": "simpsons",
+    "id": "esqueleto_esperando",
+    "name": "Esqueleto Esperando",
+    "imageUrl": "https://imgflip.com/s/meme/Waiting-Skeleton.jpg",
+    "category": "trending",
     "textZones": [
-      {
-        "id": "left",
-        "label": "Tentación 1",
-        "defaultX": 0.14,
-        "defaultY": 0.82,
-        "defaultText": ""
-      },
-      {
-        "id": "center",
-        "label": "Lo que debería hacer",
-        "defaultX": 0.5,
-        "defaultY": 0.1,
-        "defaultText": ""
-      },
-      {
-        "id": "right",
-        "label": "Tentación 2",
-        "defaultX": 0.84,
-        "defaultY": 0.82,
-        "defaultText": ""
-      }
+      { "id": "top", "label": "Situación", "defaultX": 0.488, "defaultY": 0.128, "defaultText": "" },
+      { "id": "bottom", "label": "Esperando desde", "defaultX": 0.488, "defaultY": 0.835, "defaultText": "" }
     ]
   },
   {
-    "id": "pelea_caos",
-    "name": "Pelea de Monos (Simpsons)",
-    "imageUrl": "https://i.imgflip.com/2et6ki.jpg",
-    "category": "simpsons",
+    "id": "pablo_escobar_triste",
+    "name": "Pablo Escobar Triste",
+    "imageUrl": "https://imgflip.com/s/meme/Sad-Pablo-Escobar.jpg",
+    "category": "trending",
     "textZones": [
-      {
-        "id": "top",
-        "label": "Situación",
-        "defaultX": 0.5,
-        "defaultY": 0.05,
-        "defaultText": ""
-      },
-      {
-        "id": "bottom",
-        "label": "Resultado",
-        "defaultX": 0.5,
-        "defaultY": 0.95,
-        "defaultText": ""
-      }
+      { "id": "top", "label": "Situación", "defaultX": 0.475, "defaultY": 0.400, "defaultText": "" },
+      { "id": "bottom_left", "label": "Opción izquierda", "defaultX": 0.238, "defaultY": 0.851, "defaultText": "" },
+      { "id": "bottom_right", "label": "Opción derecha", "defaultX": 0.722, "defaultY": 0.851, "defaultText": "" }
     ]
   },
   {
-    "id": "bart_clase",
-    "name": "Bart Hace Reír a la Clase",
-    "imageUrl": "https://i.imgflip.com/176h0h.jpg",
-    "category": "simpsons",
+    "id": "marcado_a_salvo_de",
+    "name": "Marcado a Salvo de...",
+    "imageUrl": "https://imgflip.com/s/meme/Marked-Safe-From.jpg",
+    "category": "trending",
     "textZones": [
-      {
-        "id": "panel1",
-        "label": "La clase (panel 1)",
-        "defaultX": 0.5,
-        "defaultY": 0.1,
-        "defaultText": ""
-      },
-      {
-        "id": "panel2",
-        "label": "Bart dice (panel 2)",
-        "defaultX": 0.5,
-        "defaultY": 0.5,
-        "defaultText": ""
-      },
-      {
-        "id": "panel3",
-        "label": "Reacción clase (panel 3)",
-        "defaultX": 0.5,
-        "defaultY": 0.88,
-        "defaultText": ""
-      }
+      { "id": "evento", "label": "Evento", "defaultX": 0.414, "defaultY": 0.138, "defaultText": "" },
+      { "id": "comentario", "label": "Comentario", "defaultX": 0.389, "defaultY": 0.476, "defaultText": "" }
     ]
   },
   {
-    "id": "homero_babeando",
-    "name": "Homero Babeando",
-    "imageUrl": "https://i.imgflip.com/9czz.jpg",
-    "category": "simpsons",
+    "id": "x_por_todos_lados",
+    "name": "X, X Por Todos Lados",
+    "imageUrl": "https://imgflip.com/s/meme/X-X-Everywhere.jpg",
+    "category": "trending",
     "textZones": [
-      {
-        "id": "top",
-        "label": "Texto",
-        "defaultX": 0.5,
-        "defaultY": 0.1,
-        "defaultText": ""
-      }
+      { "id": "top", "label": "Texto superior", "defaultX": 0.332, "defaultY": 0.091, "defaultText": "" },
+      { "id": "bottom", "label": "Texto inferior", "defaultX": 0.332, "defaultY": 0.553, "defaultText": "por todos lados" }
     ]
   },
   {
-    "id": "moe_throws_barney",
-    "name": "Moe Tira a Barney",
-    "imageUrl": "https://i.imgflip.com/34eewo.jpg",
-    "category": "simpsons",
+    "id": "tenes_mas_de_eso",
+    "name": "¿Tenés Más de Eso?",
+    "imageUrl": "https://imgflip.com/s/meme/Yall-Got-Any-More-Of-That.jpg",
+    "category": "trending",
     "textZones": [
-      {
-        "id": "top",
-        "label": "Motivo",
-        "defaultX": 0.45,
-        "defaultY": 0.26,
-        "defaultText": ""
-      },
-      {
-        "id": "middle",
-        "label": "Excusa de Moe",
-        "defaultX": 0.4,
-        "defaultY": 0.55,
-        "defaultText": ""
-      },
-      {
-        "id": "bottom",
-        "label": "Resultado (Barney volando)",
-        "defaultX": 0.15,
-        "defaultY": 0.9,
-        "defaultText": ""
-      }
+      { "id": "top", "label": "Texto superior", "defaultX": 0.407, "defaultY": 0.110, "defaultText": "" },
+      { "id": "bottom", "label": "Texto inferior", "defaultX": 0.407, "defaultY": 0.684, "defaultText": "" }
     ]
   },
   {
-    "id": "lisa_presentacion",
-    "name": "Presentación de Lisa",
-    "imageUrl": "https://i.imgflip.com/2baxar.jpg",
-    "category": "simpsons",
+    "id": "caida_de_bici",
+    "name": "Caída de Bici",
+    "imageUrl": "https://imgflip.com/s/meme/Bike-Fall.jpg",
+    "category": "trending",
     "textZones": [
-      {
-        "id": "top",
-        "label": "Contenido de la presentación",
-        "defaultX": 0.4,
-        "defaultY": 0.26,
-        "defaultText": ""
-      },
-      {
-        "id": "bottom",
-        "label": "Reacción de Lisa",
-        "defaultX": 0.53,
-        "defaultY": 0.61,
-        "defaultText": ""
-      }
+      { "id": "top", "label": "Antes de la caída", "defaultX": 0.710, "defaultY": 0.234, "defaultText": "" },
+      { "id": "middle", "label": "Durante la caída", "defaultX": 0.251, "defaultY": 0.568, "defaultText": "" },
+      { "id": "bottom", "label": "Consecuencia", "defaultX": 0.690, "defaultY": 0.735, "defaultText": "" }
     ]
   },
   {
-    "id": "no_me_hagas_tocar_cartel",
-    "name": "No Me Hagas Tocar el Cartel",
-    "imageUrl": "https://i.imgflip.com/2equ7w.jpg",
-    "category": "simpsons",
+    "id": "aqui_pondria_mi_trofeo",
+    "name": "Aquí Pondría Mi Trofeo (Si Tuviera Uno)",
+    "imageUrl": "https://imgflip.com/s/meme/This-Is-Where-Id-Put-My-Trophy-If-I-Had-One.jpg",
+    "category": "trending",
     "textZones": [
-      {
-        "id": "sign",
-        "label": "Texto del cartel",
-        "defaultX": 0.5,
-        "defaultY": 0.71,
-        "defaultText": ""
-      },
-      {
-        "id": "caption",
-        "label": "Comentario",
-        "defaultX": 0.74,
-        "defaultY": 0.92,
-        "defaultText": ""
-      }
+      { "id": "top", "label": "Texto superior", "defaultX": 0.488, "defaultY": 0.128, "defaultText": "" },
+      { "id": "bottom", "label": "Texto inferior", "defaultX": 0.488, "defaultY": 0.836, "defaultText": "" }
     ]
   },
   {
-    "id": "homer_gordo",
-    "name": "Homer Engordando",
-    "imageUrl": "https://i.imgflip.com/2lhzmp.jpg",
-    "category": "simpsons",
+    "id": "doge_musculoso_vs_cheems",
+    "name": "Doge Musculoso vs Cheems",
+    "imageUrl": "https://imgflip.com/s/meme/Buff-Doge-vs-Cheems.png",
+    "category": "trending",
     "textZones": [
-      {
-        "id": "top",
-        "label": "Antes",
-        "defaultX": 0.15,
-        "defaultY": 0.25,
-        "defaultText": ""
-      },
-      {
-        "id": "bottom",
-        "label": "Ahora",
-        "defaultX": 0.17,
-        "defaultY": 0.71,
-        "defaultText": ""
-      }
+      { "id": "etiqueta_doge", "label": "Etiqueta Doge", "defaultX": 0.177, "defaultY": 0.046, "defaultText": "" },
+      { "id": "etiqueta_cheems", "label": "Etiqueta Cheems", "defaultX": 0.587, "defaultY": 0.062, "defaultText": "" },
+      { "id": "doge_dice", "label": "Doge dice", "defaultX": 0.174, "defaultY": 0.623, "defaultText": "" },
+      { "id": "cheems_dice", "label": "Cheems dice", "defaultX": 0.590, "defaultY": 0.623, "defaultText": "" }
     ]
   },
   {
-    "id": "simpsons_hasta_ahora",
-    "name": "Simpsons Hasta Ahora",
-    "imageUrl": "https://i.imgflip.com/26frsf.jpg",
-    "category": "simpsons",
+    "id": "todos_reciben_uno_oprah",
+    "name": "Todos Reciben Uno (Oprah)",
+    "imageUrl": "https://imgflip.com/s/meme/Oprah-You-Get-A.jpg",
+    "category": "trending",
     "textZones": [
-      {
-        "id": "top",
-        "label": "Cómo empezó",
-        "defaultX": 0.42,
-        "defaultY": 0.11,
-        "defaultText": ""
-      },
-      {
-        "id": "bottom",
-        "label": "Cómo va ahora",
-        "defaultX": 0.42,
-        "defaultY": 0.7,
-        "defaultText": ""
-      }
+      { "id": "top", "label": "Texto superior", "defaultX": 0.394, "defaultY": 0.107, "defaultText": "" },
+      { "id": "bottom", "label": "Texto inferior", "defaultX": 0.394, "defaultY": 0.659, "defaultText": "¡Todos reciben uno!" }
     ]
   },
   {
-    "id": "homer_durmiendo_tranquilo",
-    "name": "Homer Durmiendo Tranquilo",
-    "imageUrl": "https://i.imgflip.com/2rfd59.png",
-    "category": "simpsons",
+    "id": "son_la_misma_foto",
+    "name": "Son la Misma Foto",
+    "imageUrl": "https://imgflip.com/s/meme/Theyre-The-Same-Picture.jpg",
+    "category": "trending",
     "textZones": [
-      {
-        "id": "top",
-        "label": "Situación caótica",
-        "defaultX": 0.45,
-        "defaultY": 0.12,
-        "defaultText": ""
-      },
-      {
-        "id": "bottom",
-        "label": "Homer durmiendo tranquilo",
-        "defaultX": 0.45,
-        "defaultY": 0.76,
-        "defaultText": ""
-      }
+      { "id": "imagen1", "label": "Imagen 1", "defaultX": 0.268, "defaultY": 0.188, "defaultText": "" },
+      { "id": "imagen2", "label": "Imagen 2", "defaultX": 0.763, "defaultY": 0.246, "defaultText": "" },
+      { "id": "bottom", "label": "Texto inferior", "defaultX": 0.641, "defaultY": 0.851, "defaultText": "Son la misma foto" }
     ]
   },
   {
-    "id": "ya_esta_muerto",
-    "name": "Ya Está Muerto, Basta",
-    "imageUrl": "https://i.imgflip.com/4xjuyu.jpg",
-    "category": "simpsons",
+    "id": "siempre_lo_fue",
+    "name": "Siempre Lo Fue",
+    "imageUrl": "https://imgflip.com/s/meme/Always-Has-Been.png",
+    "category": "trending",
     "textZones": [
-      {
-        "id": "text1",
-        "label": "Personaje 1 (fiesta)",
-        "defaultX": 0.61,
-        "defaultY": 0.81,
-        "defaultText": ""
-      },
-      {
-        "id": "text2",
-        "label": "Personaje 2 (fiesta)",
-        "defaultX": 0.25,
-        "defaultY": 0.88,
-        "defaultText": ""
-      }
-    ]
-  },
-  {
-    "id": "bart_silla_homer",
-    "name": "Bart Golpea a Homer con la Silla",
-    "imageUrl": "https://i.imgflip.com/29ryho.jpg",
-    "category": "simpsons",
-    "textZones": [
-      {
-        "id": "left",
-        "label": "Homer",
-        "defaultX": 0.19,
-        "defaultY": 0.41,
-        "defaultText": ""
-      },
-      {
-        "id": "right",
-        "label": "Bart con la silla",
-        "defaultX": 0.48,
-        "defaultY": 0.38,
-        "defaultText": ""
-      }
-    ]
-  },
-  {
-    "id": "look_marge",
-    "name": "Look Marge",
-    "imageUrl": "https://i.imgflip.com/d9p67.jpg",
-    "category": "simpsons",
-    "textZones": [
-      {
-        "id": "top",
-        "label": "Situación",
-        "defaultX": 0.49,
-        "defaultY": 0.13,
-        "defaultText": ""
-      },
-      {
-        "id": "bottom",
-        "label": "Look Marge",
-        "defaultX": 0.49,
-        "defaultY": 0.83,
-        "defaultText": ""
-      }
-    ]
-  },
-  {
-    "id": "skinner_fuera_de_onda",
-    "name": "¿Estoy Fuera de Onda? (Skinner)",
-    "imageUrl": "https://i.imgflip.com/t4lsm.jpg",
-    "category": "simpsons",
-    "textZones": [
-      {
-        "id": "top",
-        "label": "Pregunta de Skinner",
-        "defaultX": 0.42,
-        "defaultY": 0.11,
-        "defaultText": "¿Estoy fuera de onda?"
-      },
-      {
-        "id": "bottom",
-        "label": "Respuesta",
-        "defaultX": 0.42,
-        "defaultY": 0.71,
-        "defaultText": "No, son los niños los que están mal"
-      }
-    ]
-  },
-  {
-    "id": "lisa_cafe_etiqueta",
-    "name": "Café de Lisa con Etiqueta",
-    "imageUrl": "https://i.imgflip.com/1so7yh.jpg",
-    "category": "simpsons",
-    "textZones": [
-      {
-        "id": "label",
-        "label": "Etiqueta del café (rotada)",
-        "defaultX": 0.16,
-        "defaultY": 0.21,
-        "defaultText": "Café con..."
-      },
-      {
-        "id": "extra",
-        "label": "Texto adicional",
-        "defaultX": 0.56,
-        "defaultY": 0.52,
-        "defaultText": ""
-      }
-    ]
-  },
-  {
-    "id": "apu_recibe_bala",
-    "name": "Apu Recibe la Bala",
-    "imageUrl": "https://i.imgflip.com/2egbfa.jpg",
-    "category": "simpsons",
-    "textZones": [
-      {
-        "id": "top",
-        "label": "Situación",
-        "defaultX": 0.45,
-        "defaultY": 0.29,
-        "defaultText": ""
-      },
-      {
-        "id": "middle",
-        "label": "Personaje 1",
-        "defaultX": 0.2,
-        "defaultY": 0.43,
-        "defaultText": ""
-      },
-      {
-        "id": "bottom",
-        "label": "Apu (sacrificio)",
-        "defaultX": 0.61,
-        "defaultY": 0.58,
-        "defaultText": ""
-      }
-    ]
-  },
-  {
-    "id": "ralph_piensan_lindos",
-    "name": "Yo Solo Pienso Que Son Lindos (Ralph)",
-    "imageUrl": "https://i.imgflip.com/3tjygl.png",
-    "category": "simpsons",
-    "textZones": [
-      {
-        "id": "top",
-        "label": "Pregunta o comentario",
-        "defaultX": 0.19,
-        "defaultY": 0.12,
-        "defaultText": ""
-      },
-      {
-        "id": "bottom",
-        "label": "Respuesta de Ralph",
-        "defaultX": 0.16,
-        "defaultY": 0.5,
-        "defaultText": "Yo solo pienso que son lindos"
-      }
-    ]
-  },
-  {
-    "id": "viejo_le_grita_a_nube",
-    "name": "Viejo Le Grita a una Nube (Abe)",
-    "imageUrl": "https://i.imgflip.com/wslr8.jpg",
-    "category": "simpsons",
-    "textZones": [
-      {
-        "id": "top",
-        "label": "Titular",
-        "defaultX": 0.38,
-        "defaultY": 0.1,
-        "defaultText": ""
-      },
-      {
-        "id": "bottom",
-        "label": "Motivo del enojo",
-        "defaultX": 0.38,
-        "defaultY": 0.64,
-        "defaultText": ""
-      }
-    ]
-  },
-  {
-    "id": "peor_dia_hasta_ahora",
-    "name": "El Peor Día Hasta Ahora (Homer y Bart)",
-    "imageUrl": "https://i.imgflip.com/98ocwu.jpg",
-    "category": "simpsons",
-    "textZones": [
-      {
-        "id": "top",
-        "label": "Peor día hasta ahora",
-        "defaultX": 0.41,
-        "defaultY": 0.11,
-        "defaultText": "El peor día de mi vida hasta ahora"
-      },
-      {
-        "id": "bottom",
-        "label": "Lo que pasa después",
-        "defaultX": 0.41,
-        "defaultY": 0.69,
-        "defaultText": ""
-      }
-    ]
-  },
-  {
-    "id": "echando_del_bar",
-    "name": "Echando a los Simpsons del Bar",
-    "imageUrl": "https://i.imgflip.com/3a5eiw.jpg",
-    "category": "simpsons",
-    "textZones": [
-      {
-        "id": "top",
-        "label": "Razón para entrar",
-        "defaultX": 0.21,
-        "defaultY": 0.15,
-        "defaultText": ""
-      },
-      {
-        "id": "middle",
-        "label": "Razón para ser echado",
-        "defaultX": 0.5,
-        "defaultY": 0.27,
-        "defaultText": ""
-      },
-      {
-        "id": "bottom",
-        "label": "Reacción final",
-        "defaultX": 0.12,
-        "defaultY": 0.89,
-        "defaultText": ""
-      }
-    ]
-  },
-  {
-    "id": "woohoo_homer",
-    "name": "Woohoo! (Homer)",
-    "imageUrl": "https://i.imgflip.com/36i2h.jpg",
-    "category": "simpsons",
-    "textZones": [
-      {
-        "id": "top",
-        "label": "Situación",
-        "defaultX": 0.39,
-        "defaultY": 0.11,
-        "defaultText": ""
-      },
-      {
-        "id": "bottom",
-        "label": "Woohoo!",
-        "defaultX": 0.39,
-        "defaultY": 0.66,
-        "defaultText": "Woohoo!"
-      }
-    ]
-  },
-  {
-    "id": "ralph_nariz",
-    "name": "Ralph Wiggum Sacándose los Mocos",
-    "imageUrl": "https://i.imgflip.com/419b2l.png",
-    "category": "simpsons",
-    "textZones": [
-      {
-        "id": "top",
-        "label": "Comentario",
-        "defaultX": 0.41,
-        "defaultY": 0.11,
-        "defaultText": ""
-      },
-      {
-        "id": "bottom",
-        "label": "Reacción de Ralph",
-        "defaultX": 0.41,
-        "defaultY": 0.69,
-        "defaultText": ""
-      }
+      { "id": "pregunta", "label": "Pregunta", "defaultX": 0.467, "defaultY": 0.032, "defaultText": "Un momento, ¿siempre fue así?" },
+      { "id": "respuesta", "label": "Respuesta", "defaultX": 0.238, "defaultY": 0.212, "defaultText": "Siempre lo fue" }
     ]
   }
 ]
