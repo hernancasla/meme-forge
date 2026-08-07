@@ -23,7 +23,7 @@ fun HomeScreen(
     viewModel: HomeViewModel = hiltViewModel()
 ) {
     val uiState by viewModel.uiState.collectAsState()
-    val categories = listOf("all", "simpsons", "classic", "trending", "reaction")
+    val categories = listOf("all", "simpsons", "classic", "trending")
 
     Scaffold(
         topBar = {
@@ -61,7 +61,6 @@ fun HomeScreen(
                                     "simpsons" -> stringResource(R.string.category_simpsons)
                                     "classic" -> stringResource(R.string.category_classic)
                                     "trending" -> stringResource(R.string.category_trending)
-                                    "reaction" -> stringResource(R.string.category_reaction)
                                     else -> category
                                 }
                             )

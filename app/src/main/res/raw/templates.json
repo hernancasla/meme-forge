@@ -54,7 +54,7 @@
     "id": "twobuttons",
     "name": "Two Buttons",
     "imageUrl": "https://i.imgflip.com/1g8my4.jpg",
-    "category": "reaction",
+    "category": "trending",
     "textZones": [
       {
         "id": "btn1",
@@ -76,7 +76,7 @@
     "id": "thisisfine",
     "name": "This is Fine",
     "imageUrl": "https://i.imgflip.com/wxica.jpg",
-    "category": "reaction",
+    "category": "trending",
     "textZones": [
       {
         "id": "top",

@@ -14,7 +14,7 @@ Uso:
     python3 scripts/add_template.py <image_url> <section> --dry-run
 
 Secciones válidas:
-    simpsons, classic, trending, reaction
+    simpsons, classic, trending
 
 Ejemplos:
     python3 scripts/add_template.py "https://i.imgflip.com/xyz.jpg" "simpsons"
@@ -35,7 +35,7 @@ from pathlib import Path
 # ---------------------------------------------------------------------------
 
 MODEL = "claude-sonnet-4-5"
-VALID_CATEGORIES = {"simpsons", "classic", "trending", "reaction"}
+VALID_CATEGORIES = {"simpsons", "classic", "trending"}
 
 SCRIPT_DIR = Path(__file__).parent.resolve()
 PROJECT_ROOT = SCRIPT_DIR.parent

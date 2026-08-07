@@ -9,7 +9,6 @@
     <string name="category_simpsons">Simpsons</string>
     <string name="category_classic">Classic</string>
     <string name="category_trending">Trending</string>
-    <string name="category_reaction">Reaction</string>
 
     <!-- Editor -->
     <string name="template_editor">Meme Editor</string>
