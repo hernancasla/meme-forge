@@ -1,10 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- MemeForge launcher: meme card (caption bars + laughing face) with a forge hammer. -->
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
     android:width="108dp"
     android:height="108dp"
     android:viewportWidth="108"
     android:viewportHeight="108">
+
+    <!-- Card shadow -->
+    <path
+        android:fillColor="#33000000"
+        android:pathData="M34,32h38a6,6 0,0 1,6 6v38a6,6 0,0 1,-6 6h-38a6,6 0,0 1,-6 -6v-38a6,6 0,0 1,6 -6z" />
+
+    <!-- Meme card -->
     <path
         android:fillColor="#FFFFFF"
-        android:pathData="M54,24 L80,60 L66,60 L66,84 L42,84 L42,60 L28,60 Z"/>
+        android:pathData="M32,29h38a6,6 0,0 1,6 6v38a6,6 0,0 1,-6 6h-38a6,6 0,0 1,-6 -6v-38a6,6 0,0 1,6 -6z" />
+
+    <!-- Top / bottom caption bars -->
+    <path
+        android:fillColor="#212121"
+        android:pathData="M38,34h26a2,2 0,0 1,0 4h-26a2,2 0,0 1,0 -4z" />
+    <path
+        android:fillColor="#212121"
+        android:pathData="M41,70h20a2,2 0,0 1,0 4h-20a2,2 0,0 1,0 -4z" />
+
+    <!-- Laughing face -->
+    <path
+        android:fillColor="#FFC107"
+        android:pathData="M51,41a13,13 0,1 1,0 26a13,13 0,1 1,0 -26z" />
+    <path
+        android:pathData="M43.5,51l2.8,-2.8l2.8,2.8M52.9,51l2.8,-2.8l2.8,2.8"
+        android:strokeColor="#212121"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:strokeWidth="2.2" />
+    <path
+        android:fillColor="#212121"
+        android:pathData="M44,55h14a7,7 0,0 1,-14 0z" />
+    <path
+        android:fillColor="#E53935"
+        android:pathData="M47.5,61.7h7a3.5,2.5 0,0 1,-7 0z" />
+
+    <!-- Forge hammer -->
+    <group
+        android:pivotX="73"
+        android:pivotY="58"
+        android:rotation="-40">
+        <path
+            android:fillColor="#6D4C41"
+            android:pathData="M71.5,58h3v14a1.5,1.5 0,0 1,-3 0z" />
+        <path
+            android:fillColor="#455A64"
+            android:pathData="M65.5,51h15a1.5,1.5 0,0 1,1.5 1.5v6a1.5,1.5 0,0 1,-1.5 1.5h-15a1.5,1.5 0,0 1,-1.5 -1.5v-6a1.5,1.5 0,0 1,1.5 -1.5z" />
+        <path
+            android:fillColor="#90A4AE"
+            android:pathData="M65.5,51h15a1.5,1.5 0,0 1,1.5 1.5v1.5h-18v-1.5a1.5,1.5 0,0 1,1.5 -1.5z" />
+    </group>
 </vector>
