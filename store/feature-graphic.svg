@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1024" height="500" viewBox="0 0 1024 500">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1024" y2="500" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FF8A3D"/><stop offset="1" stop-color="#D84315"/>
+    </linearGradient>
+    <g id="mark">
+      <path fill="#000000" fill-opacity="0.2" d="M34,32h38a6,6 0 0 1 6,6v38a6,6 0 0 1 -6,6h-38a6,6 0 0 1 -6,-6v-38a6,6 0 0 1 6,-6z"/>
+      <path fill="#FFFFFF" d="M32,29h38a6,6 0 0 1 6,6v38a6,6 0 0 1 -6,6h-38a6,6 0 0 1 -6,-6v-38a6,6 0 0 1 6,-6z"/>
+      <path fill="#212121" d="M38,34h26a2,2 0 0 1 0,4h-26a2,2 0 0 1 0,-4z"/>
+      <path fill="#212121" d="M41,70h20a2,2 0 0 1 0,4h-20a2,2 0 0 1 0,-4z"/>
+      <path fill="#FFC107" d="M51,41a13,13 0 1 1 0,26a13,13 0 1 1 0,-26z"/>
+      <path fill="none" stroke="#212121" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M43.5,51l2.8,-2.8l2.8,2.8M52.9,51l2.8,-2.8l2.8,2.8"/>
+      <path fill="#212121" d="M44,55h14a7,7 0 0 1 -14,0z"/>
+      <path fill="#E53935" d="M47.5,61.7h7a3.5,2.5 0 0 1 -7,0z"/>
+      <g transform="rotate(-40 73 58)">
+        <path fill="#6D4C41" d="M71.5,58h3v14a1.5,1.5 0 0 1 -3,0z"/>
+        <path fill="#455A64" d="M65.5,51h15a1.5,1.5 0 0 1 1.5,1.5v6a1.5,1.5 0 0 1 -1.5,1.5h-15a1.5,1.5 0 0 1 -1.5,-1.5v-6a1.5,1.5 0 0 1 1.5,-1.5z"/>
+        <path fill="#90A4AE" d="M65.5,51h15a1.5,1.5 0 0 1 1.5,1.5v1.5h-18v-1.5a1.5,1.5 0 0 1 1.5,-1.5z"/>
+      </g>
+    </g>
+  </defs>
+  <rect width="1024" height="500" fill="url(#bg)"/>
+  <!-- decorative faint cards -->
+  <g opacity="0.12" fill="#FFFFFF">
+    <rect x="-30" y="330" width="150" height="140" rx="18" transform="rotate(-14 45 400)"/>
+    <rect x="880" y="-40" width="170" height="160" rx="18" transform="rotate(12 965 40)"/>
+    <rect x="930" y="370" width="120" height="110" rx="16" transform="rotate(-8 990 425)"/>
+    <circle cx="470" cy="60" r="26"/>
+    <circle cx="560" cy="455" r="18"/>
+  </g>
+  <!-- logo mark -->
+  <g transform="translate(40,10) scale(4.4)"><use xlink:href="#mark"/></g>
+  <!-- text -->
+  <text x="470" y="225" font-family="Avenir Next, Helvetica Neue, Arial" font-weight="800" font-size="80" fill="#FFFFFF" letter-spacing="-1">MemeForge</text>
+  <text x="474" y="290" font-family="Avenir Next, Helvetica Neue, Arial" font-weight="600" font-size="38" fill="#FFFFFF" fill-opacity="0.95">Creá memes en segundos</text>
+  <g font-family="Avenir Next, Helvetica Neue, Arial" font-weight="700" font-size="24" fill="#D84315">
+    <rect x="474" y="325" width="170" height="46" rx="23" fill="#FFFFFF"/>
+    <text x="559" y="356" text-anchor="middle">Plantillas</text>
+    <rect x="658" y="325" width="150" height="46" rx="23" fill="#FFFFFF"/>
+    <text x="733" y="356" text-anchor="middle">Stickers</text>
+    <rect x="822" y="325" width="150" height="46" rx="23" fill="#FFFFFF"/>
+    <text x="897" y="356" text-anchor="middle">Compartí</text>
+  </g>
+</svg>
