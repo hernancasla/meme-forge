@@ -30,6 +30,8 @@ import sys
 import urllib.request
 from pathlib import Path
 
+from publish_templates import CDN_URL, step_purge, step_verify
+
 # ---------------------------------------------------------------------------
 # Config
 # ---------------------------------------------------------------------------
@@ -302,29 +304,12 @@ def main() -> None:
         print(f"❌  Error de git: {exc.stderr.strip()}")
         sys.exit(1)
 
-    cdn_url = (
-        "https://cdn.jsdelivr.net/gh/hernancasla/meme-forge@main"
-        "/templates/templates.json"
-    )
-
-    # ---- Purge jsDelivr cache (GET) so the new template is live immediately --
-    print("\n🌐  Purgando caché de jsDelivr…")
-    try:
-        purge_url = cdn_url.replace(
-            "cdn.jsdelivr.net", "purge.jsdelivr.net"
-        )
-        req = urllib.request.Request(purge_url)
-        with urllib.request.urlopen(req, timeout=10) as resp:
-            body = resp.read().decode()
-            if '"success":true' in body.replace(" ", ""):
-                print("    ✅  Caché purgado — disponible ahora.")
-            else:
-                print(f"    ⚠️  Respuesta inesperada: {body[:120]}")
-    except Exception as exc:
-        print(f"    ⚠️  Purge falló (no crítico, propaga en ~10 min): {exc}")
+    # ---- Purge jsDelivr cache + verify, so the new template is live immediately --
+    step_purge()
+    step_verify(templates)
 
     print(f"\n🎉  ¡Listo! Template '{name}' (id: {entry_id}) pusheado a main.")
-    print(f"    {cdn_url}")
+    print(f"    {CDN_URL}")
 
 
 if __name__ == "__main__":
