@@ -1,0 +1,48 @@
+appId: com.memeforge
+name: "Smoke 02 - Primera, segunda y tercera imagen (tab Todas)"
+tags:
+  - smoke
+---
+# Tarjeta = contenedor clickeable cuyo hijo tiene texto (imagen o nombre),
+# ubicado debajo de los tabs.
+# Maestro ordena el index por posición: arriba->abajo, izquierda->derecha.
+# index 0 = 1ª imagen, 1 = 2ª (a la derecha), 2 = 3ª (fila siguiente).
+- launchApp:
+    clearState: true
+- extendedWaitUntil:
+    visible:
+      containsChild:
+        text: ".+"
+      below: "Todas|All"
+      index: 2
+    timeout: 15000
+
+# Click 1: primera imagen
+- tapOn:
+    containsChild:
+      text: ".+"
+    below: "Todas|All"
+    index: 0
+- assertVisible: "Editor de memes|Meme Editor"
+- back
+- assertVisible: "Todas|All"
+
+# Click 2: segunda imagen
+- tapOn:
+    containsChild:
+      text: ".+"
+    below: "Todas|All"
+    index: 1
+- assertVisible: "Editor de memes|Meme Editor"
+- back
+- assertVisible: "Todas|All"
+
+# Click 3: tercera imagen
+- tapOn:
+    containsChild:
+      text: ".+"
+    below: "Todas|All"
+    index: 2
+- assertVisible: "Editor de memes|Meme Editor"
+- back
+- assertVisible: "Todas|All"

@@ -1,0 +1,42 @@
+appId: com.memeforge
+name: "Smoke 03 - Tab + imagen"
+tags:
+  - smoke
+---
+# Mismo selector de tarjeta que smoke_02 (index ordenado por posición en pantalla).
+- launchApp:
+    clearState: true
+- extendedWaitUntil:
+    visible: "MemeForge"
+    timeout: 15000
+
+# Click 1: Simpsons -> primera imagen
+- tapOn: "Simpsons"
+- tapOn:
+    containsChild:
+      text: ".+"
+    below: "Todas|All"
+    index: 0
+- assertVisible: "Editor de memes|Meme Editor"
+- back
+
+# Click 2: Clásicos -> segunda imagen
+- tapOn: "Clásicos|Classic"
+- tapOn:
+    containsChild:
+      text: ".+"
+    below: "Todas|All"
+    index: 1
+- assertVisible: "Editor de memes|Meme Editor"
+- back
+
+# Click 3: Tendencia -> tercera imagen
+- tapOn: "Tendencia|Trending"
+- tapOn:
+    containsChild:
+      text: ".+"
+    below: "Todas|All"
+    index: 2
+- assertVisible: "Editor de memes|Meme Editor"
+- back
+- assertVisible: "Todas|All"

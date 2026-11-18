@@ -238,17 +238,6 @@
     ]
   },
   {
-    "id": "apu_recibe_bala",
-    "name": "Apu Recibe la Bala",
-    "imageUrl": "https://i.imgflip.com/2egbfa.jpg",
-    "category": "simpsons",
-    "textZones": [
-      { "id": "top", "label": "Situación", "defaultX": 0.45, "defaultY": 0.29, "defaultText": "" },
-      { "id": "middle", "label": "Personaje 1", "defaultX": 0.2, "defaultY": 0.43, "defaultText": "" },
-      { "id": "bottom", "label": "Apu (sacrificio)", "defaultX": 0.61, "defaultY": 0.58, "defaultText": "" }
-    ]
-  },
-  {
     "id": "ralph_piensan_lindos",
     "name": "Yo Solo Pienso Que Son Lindos (Ralph)",
     "imageUrl": "https://i.imgflip.com/3tjygl.png",
@@ -483,16 +472,6 @@
       { "id": "imagen1", "label": "Imagen 1", "defaultX": 0.268, "defaultY": 0.188, "defaultText": "" },
       { "id": "imagen2", "label": "Imagen 2", "defaultX": 0.763, "defaultY": 0.246, "defaultText": "" },
       { "id": "bottom", "label": "Texto inferior", "defaultX": 0.641, "defaultY": 0.851, "defaultText": "Son la misma foto" }
-    ]
-  },
-  {
-    "id": "siempre_lo_fue",
-    "name": "Siempre Lo Fue",
-    "imageUrl": "https://imgflip.com/s/meme/Always-Has-Been.png",
-    "category": "trending",
-    "textZones": [
-      { "id": "pregunta", "label": "Pregunta", "defaultX": 0.467, "defaultY": 0.032, "defaultText": "Un momento, ¿siempre fue así?" },
-      { "id": "respuesta", "label": "Respuesta", "defaultX": 0.238, "defaultY": 0.212, "defaultText": "Siempre lo fue" }
     ]
   },
   {

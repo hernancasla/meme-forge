@@ -1,0 +1,39 @@
+appId: com.memeforge
+name: "Smoke 01 - Tabs"
+tags:
+  - smoke
+---
+# Tras cada tab se verifica que la grilla tenga al menos una tarjeta
+# (cualquier elemento con texto debajo de los tabs).
+- launchApp:
+    clearState: true
+- extendedWaitUntil:
+    visible: "MemeForge"
+    timeout: 15000
+
+# Click 1
+- tapOn: "Simpsons"
+- waitForAnimationToEnd
+- assertVisible:
+    containsChild:
+      text: ".+"
+    below: "Todas|All"
+    index: 0
+
+# Click 2
+- tapOn: "Clásicos|Classic"
+- waitForAnimationToEnd
+- assertVisible:
+    containsChild:
+      text: ".+"
+    below: "Todas|All"
+    index: 0
+
+# Click 3
+- tapOn: "Tendencia|Trending"
+- waitForAnimationToEnd
+- assertVisible:
+    containsChild:
+      text: ".+"
+    below: "Todas|All"
+    index: 0
