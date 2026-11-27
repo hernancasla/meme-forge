@@ -24,6 +24,7 @@ fun HomeScreen(
 ) {
     val uiState by viewModel.uiState.collectAsState()
     val categories = listOf("all", "simpsons", "classic", "trending")
+        .filterNot { it in HomeViewModel.HIDDEN_CATEGORIES }
 
     Scaffold(
         topBar = {

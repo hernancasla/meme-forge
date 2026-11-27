@@ -86,27 +86,6 @@
     ]
   },
   {
-    "id": "skinner_tentado",
-    "name": "Skinner Tentado",
-    "imageUrl": "https://i.imgflip.com/2vtfb6.png",
-    "category": "simpsons",
-    "textZones": [
-      { "id": "left", "label": "Tentación 1", "defaultX": 0.14, "defaultY": 0.82, "defaultText": "" },
-      { "id": "center", "label": "Lo que debería hacer", "defaultX": 0.50, "defaultY": 0.10, "defaultText": "" },
-      { "id": "right", "label": "Tentación 2", "defaultX": 0.84, "defaultY": 0.82, "defaultText": "" }
-    ]
-  },
-  {
-    "id": "pelea_caos",
-    "name": "Pelea de Monos (Simpsons)",
-    "imageUrl": "https://i.imgflip.com/2et6ki.jpg",
-    "category": "simpsons",
-    "textZones": [
-      { "id": "top", "label": "Situación", "defaultX": 0.5, "defaultY": 0.05, "defaultText": "" },
-      { "id": "bottom", "label": "Resultado", "defaultX": 0.5, "defaultY": 0.95, "defaultText": "" }
-    ]
-  },
-  {
     "id": "bart_clase",
     "name": "Bart Hace Reír a la Clase",
     "imageUrl": "https://i.imgflip.com/176h0h.jpg",
@@ -124,17 +103,6 @@
     "category": "simpsons",
     "textZones": [
       { "id": "top", "label": "Texto", "defaultX": 0.5, "defaultY": 0.1, "defaultText": "" }
-    ]
-  },
-  {
-    "id": "moe_throws_barney",
-    "name": "Moe Tira a Barney",
-    "imageUrl": "https://i.imgflip.com/34eewo.jpg",
-    "category": "simpsons",
-    "textZones": [
-      { "id": "top", "label": "Motivo", "defaultX": 0.45, "defaultY": 0.26, "defaultText": "" },
-      { "id": "middle", "label": "Excusa de Moe", "defaultX": 0.4, "defaultY": 0.55, "defaultText": "" },
-      { "id": "bottom", "label": "Resultado (Barney volando)", "defaultX": 0.15, "defaultY": 0.9, "defaultText": "" }
     ]
   },
   {
@@ -185,26 +153,6 @@
     "textZones": [
       { "id": "top", "label": "Situación caótica", "defaultX": 0.45, "defaultY": 0.12, "defaultText": "" },
       { "id": "bottom", "label": "Homer durmiendo tranquilo", "defaultX": 0.45, "defaultY": 0.76, "defaultText": "" }
-    ]
-  },
-  {
-    "id": "ya_esta_muerto",
-    "name": "Ya Está Muerto, Basta",
-    "imageUrl": "https://i.imgflip.com/4xjuyu.jpg",
-    "category": "simpsons",
-    "textZones": [
-      { "id": "text1", "label": "Personaje 1 (fiesta)", "defaultX": 0.61, "defaultY": 0.81, "defaultText": "" },
-      { "id": "text2", "label": "Personaje 2 (fiesta)", "defaultX": 0.25, "defaultY": 0.88, "defaultText": "" }
-    ]
-  },
-  {
-    "id": "bart_silla_homer",
-    "name": "Bart Golpea a Homer con la Silla",
-    "imageUrl": "https://i.imgflip.com/29ryho.jpg",
-    "category": "simpsons",
-    "textZones": [
-      { "id": "left", "label": "Homer", "defaultX": 0.19, "defaultY": 0.41, "defaultText": "" },
-      { "id": "right", "label": "Bart con la silla", "defaultX": 0.48, "defaultY": 0.38, "defaultText": "" }
     ]
   },
   {
@@ -268,17 +216,6 @@
     ]
   },
   {
-    "id": "echando_del_bar",
-    "name": "Echando a los Simpsons del Bar",
-    "imageUrl": "https://i.imgflip.com/3a5eiw.jpg",
-    "category": "simpsons",
-    "textZones": [
-      { "id": "top", "label": "Razón para entrar", "defaultX": 0.21, "defaultY": 0.15, "defaultText": "" },
-      { "id": "middle", "label": "Razón para ser echado", "defaultX": 0.5, "defaultY": 0.27, "defaultText": "" },
-      { "id": "bottom", "label": "Reacción final", "defaultX": 0.12, "defaultY": 0.89, "defaultText": "" }
-    ]
-  },
-  {
     "id": "woohoo_homer",
     "name": "Woohoo! (Homer)",
     "imageUrl": "https://i.imgflip.com/36i2h.jpg",
@@ -316,26 +253,6 @@
     "textZones": [
       { "id": "top", "label": "Situación", "defaultX": 0.456, "defaultY": 0.123, "defaultText": "" },
       { "id": "bottom", "label": "Conclusión", "defaultX": 0.456, "defaultY": 0.770, "defaultText": "Aliens" }
-    ]
-  },
-  {
-    "id": "nina_desastre",
-    "name": "Niña del Desastre",
-    "imageUrl": "https://imgflip.com/s/meme/Disaster-Girl.jpg",
-    "category": "classic",
-    "textZones": [
-      { "id": "top", "label": "Texto superior", "defaultX": 0.423, "defaultY": 0.114, "defaultText": "" },
-      { "id": "bottom", "label": "Texto inferior", "defaultX": 0.423, "defaultY": 0.708, "defaultText": "" }
-    ]
-  },
-  {
-    "id": "batman_cachetada_robin",
-    "name": "Batman Cacheteando a Robin",
-    "imageUrl": "https://imgflip.com/s/meme/Batman-Slapping-Robin.jpg",
-    "category": "classic",
-    "textZones": [
-      { "id": "left", "label": "Robin dice", "defaultX": 0.242, "defaultY": 0.098, "defaultText": "" },
-      { "id": "right", "label": "Batman responde", "defaultX": 0.737, "defaultY": 0.098, "defaultText": "" }
     ]
   },
   {
@@ -380,17 +297,6 @@
     ]
   },
   {
-    "id": "pablo_escobar_triste",
-    "name": "Pablo Escobar Triste",
-    "imageUrl": "https://imgflip.com/s/meme/Sad-Pablo-Escobar.jpg",
-    "category": "classic",
-    "textZones": [
-      { "id": "top", "label": "Situación", "defaultX": 0.475, "defaultY": 0.400, "defaultText": "" },
-      { "id": "bottom_left", "label": "Opción izquierda", "defaultX": 0.238, "defaultY": 0.851, "defaultText": "" },
-      { "id": "bottom_right", "label": "Opción derecha", "defaultX": 0.722, "defaultY": 0.851, "defaultText": "" }
-    ]
-  },
-  {
     "id": "marcado_a_salvo_de",
     "name": "Marcado a Salvo de...",
     "imageUrl": "https://imgflip.com/s/meme/Marked-Safe-From.jpg",
@@ -408,16 +314,6 @@
     "textZones": [
       { "id": "top", "label": "Texto superior", "defaultX": 0.332, "defaultY": 0.091, "defaultText": "" },
       { "id": "bottom", "label": "Texto inferior", "defaultX": 0.332, "defaultY": 0.553, "defaultText": "por todos lados" }
-    ]
-  },
-  {
-    "id": "tenes_mas_de_eso",
-    "name": "¿Tenés Más de Eso?",
-    "imageUrl": "https://imgflip.com/s/meme/Yall-Got-Any-More-Of-That.jpg",
-    "category": "classic",
-    "textZones": [
-      { "id": "top", "label": "Texto superior", "defaultX": 0.407, "defaultY": 0.110, "defaultText": "" },
-      { "id": "bottom", "label": "Texto inferior", "defaultX": 0.407, "defaultY": 0.684, "defaultText": "" }
     ]
   },
   {
@@ -560,18 +456,6 @@
     "textZones": [
       { "id": "top", "label": "Texto superior", "defaultX": 0.405, "defaultY": 0.111, "defaultText": "" },
       { "id": "bottom", "label": "Texto inferior", "defaultX": 0.405, "defaultY": 0.677, "defaultText": "" }
-    ]
-  },
-  {
-    "id": "madre_ignora_nino_ahogandose",
-    "name": "Madre Ignora a Niño Ahogándose",
-    "imageUrl": "https://i.imgflip.com/46hhvr.jpg",
-    "category": "classic",
-    "textZones": [
-      { "id": "madre", "label": "Madre", "defaultX": 0.488, "defaultY": 0.319, "defaultText": "" },
-      { "id": "actividad", "label": "Actividad", "defaultX": 0.842, "defaultY": 0.381, "defaultText": "" },
-      { "id": "nino", "label": "Niño ahogándose", "defaultX": 0.25, "defaultY": 0.504, "defaultText": "" },
-      { "id": "bottom", "label": "Texto inferior", "defaultX": 0.523, "defaultY": 0.834, "defaultText": "" }
     ]
   },
   {

@@ -65,7 +65,13 @@ class HomeViewModel @Inject constructor(
 
     private fun filter(templates: List<MemeTemplate>, category: String, query: String) =
         templates.filter { t ->
-            (category == "all" || t.category == category) &&
+            t.category !in HIDDEN_CATEGORIES &&
+                (category == "all" || t.category == category) &&
                 (query.isEmpty() || t.name.contains(query, ignoreCase = true))
         }
+
+    companion object {
+        /** Categories hidden from the UI (tab and templates). Remove an entry to show it again. */
+        val HIDDEN_CATEGORIES = setOf("simpsons")
+    }
 }
